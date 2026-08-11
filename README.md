@@ -184,6 +184,33 @@ npm run dev
 Backend defaults to `http://127.0.0.1:8000`, frontend to `http://localhost:5173`
 (configured via `frontend/.env`).
 
+## Deploying (Render + Netlify)
+
+Config files (`render.yaml`, `netlify.toml`) are at the repo root, ready to connect.
+
+1. **Backend → Render**: create a new Web Service from this repo. Render should
+   auto-detect `render.yaml`; if not, set build command
+   `pip install -r backend/requirements.txt`, start command
+   `uvicorn app.main:app --host 0.0.0.0 --port $PORT --app-dir backend`. Health
+   check path `/health`. Note the assigned URL once live
+   (`https://<service-name>.onrender.com`).
+2. **Frontend → Netlify**: before connecting, update `frontend/.env.production`
+   with the actual Render URL from step 1 (Vite bakes this in at build time, so
+   it must be set before Netlify builds — there's no way to change it after the
+   fact without a rebuild). Then create a new site from this repo; Netlify
+   auto-detects `netlify.toml` (base `frontend/`, build `npm run build`, publish
+   `frontend/dist`).
+3. Free-tier notes: Render's free web services spin down after inactivity, so
+   the first request after idling has a cold-start delay (10-60s) — expected,
+   not a bug. SQLite (`backend/trackpulse.db`) lives on Render's ephemeral
+   filesystem, so session history resets on redeploy/restart — acceptable for a
+   demo, would need a real database for persistence beyond that.
+
+`backend/app/inference.py` resolves the model path robustly (checks
+`<repo_root>/models/`, then `<backend>/models/`, with an env var override
+`TRACKPULSE_MODEL_PATH` available) rather than assuming a specific host
+platform's checkout layout.
+
 ## Project structure
 
 ```text

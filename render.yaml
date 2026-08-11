@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: trackpulse-backend
+    runtime: python
+    plan: free
+    # No rootDir — build/start run from the repo root so backend/app/inference.py
+    # can reliably reach ../../models/ regardless of how Render scopes rootDir
+    # checkouts (this was deliberately not assumed, see backend/app/inference.py's
+    # _resolve_model_path for the belt-and-suspenders fallback too).
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --app-dir backend
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+    healthCheckPath: /health

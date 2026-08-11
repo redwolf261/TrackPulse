@@ -7,12 +7,42 @@ yet, so the API and frontend can be developed/demoed before training finishes.
 from __future__ import annotations
 
 import io
+import os
 from pathlib import Path
 
 import numpy as np
 from PIL import Image, UnidentifiedImageError
 
-MODEL_PATH = Path(__file__).resolve().parent.parent.parent / "models" / "trackpulse_classifier.onnx"
+_MODEL_FILENAME = "trackpulse_classifier.onnx"
+
+
+def _resolve_model_path() -> Path:
+    """Find the ONNX model without assuming a specific deployment layout.
+
+    Checked in order:
+      1. TRACKPULSE_MODEL_PATH env var, if set (explicit override — use this
+         if the model is deployed somewhere other than the layouts below).
+      2. <repo_root>/models/<file> — the layout in this repo (backend/ and
+         models/ are siblings).
+      3. <backend_dir>/models/<file> — in case a deploy step copies the model
+         inside the backend service's own directory instead.
+    """
+    env_override = os.environ.get("TRACKPULSE_MODEL_PATH")
+    if env_override:
+        return Path(env_override)
+
+    backend_app_dir = Path(__file__).resolve().parent  # .../backend/app
+    candidates = [
+        backend_app_dir.parent.parent / "models" / _MODEL_FILENAME,  # repo_root/models
+        backend_app_dir.parent / "models" / _MODEL_FILENAME,  # backend/models
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return candidates[0]  # default to the expected repo-root layout; _try_load() handles absence
+
+
+MODEL_PATH = _resolve_model_path()
 CLASSES = ["DRY", "DAMP", "WET"]
 
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
