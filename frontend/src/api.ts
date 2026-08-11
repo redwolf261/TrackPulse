@@ -42,6 +42,25 @@ export async function predict(file: File, sessionId: string): Promise<PredictRes
   return res.json();
 }
 
+export interface PredictVideoResponse {
+  session_id: string;
+  frames_extracted: number;
+  frames_classified: number;
+  observations: PredictResponse[];
+}
+
+export async function predictVideo(file: File, sessionId: string): Promise<PredictVideoResponse> {
+  const form = new FormData();
+  form.append("file", file);
+  form.append("session_id", sessionId);
+  const res = await fetch(`${API_BASE}/predict/video`, { method: "POST", body: form });
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`Video processing failed (${res.status}): ${detail}`);
+  }
+  return res.json();
+}
+
 export async function getHistory(sessionId: string): Promise<HistoryResponse> {
   const res = await fetch(`${API_BASE}/history/${sessionId}`);
   if (!res.ok) throw new Error(`History fetch failed (${res.status})`);

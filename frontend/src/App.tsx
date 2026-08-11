@@ -9,7 +9,14 @@ import {
   YAxis,
 } from "recharts";
 import "./App.css";
-import { getHealth, getHistory, predict, type HistoryObservation, type PredictResponse } from "./api";
+import {
+  getHealth,
+  getHistory,
+  predict,
+  predictVideo,
+  type HistoryObservation,
+  type PredictResponse,
+} from "./api";
 
 const CONDITION_RANK: Record<string, number> = { DRY: 0, DAMP: 1, WET: 2 };
 
@@ -21,15 +28,19 @@ export default function App() {
   const [sessionId, setSessionId] = useState(newSessionId());
   const [latest, setLatest] = useState<PredictResponse | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [previewIsVideo, setPreviewIsVideo] = useState(false);
   const [history, setHistory] = useState<HistoryObservation[]>([]);
   const [loading, setLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [modelStatus, setModelStatus] = useState<{ loaded: boolean; source: string } | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp"];
-  const MAX_BYTES = 10 * 1024 * 1024;
+  const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
+  const ACCEPTED_VIDEO_TYPES = ["video/mp4", "video/quicktime", "video/webm", "video/x-msvideo"];
+  const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
+  const MAX_VIDEO_BYTES = 100 * 1024 * 1024;
 
   useEffect(() => {
     getHealth()
@@ -50,21 +61,52 @@ export default function App() {
     async (file: File) => {
       setError(null);
 
-      if (!ACCEPTED_TYPES.includes(file.type)) {
-        setError(`Unsupported file type "${file.type || "unknown"}" — please use JPEG, PNG, or WebP.`);
+      const isVideo = ACCEPTED_VIDEO_TYPES.includes(file.type);
+      const isImage = ACCEPTED_IMAGE_TYPES.includes(file.type);
+
+      if (!isVideo && !isImage) {
+        setError(
+          `Unsupported file type "${file.type || "unknown"}" — please use JPEG, PNG, WebP, MP4, MOV, WebM, or AVI.`
+        );
         return;
       }
       if (file.size === 0) {
         setError("That file is empty.");
         return;
       }
-      if (file.size > MAX_BYTES) {
+
+      if (isVideo) {
+        if (file.size > MAX_VIDEO_BYTES) {
+          setError(`Video is too large (${(file.size / 1024 / 1024).toFixed(1)}MB) — max is 100MB.`);
+          return;
+        }
+        setLoading(true);
+        setLoadingMessage("Extracting and analyzing frames — this can take a moment…");
+        setPreviewUrl(URL.createObjectURL(file));
+        setPreviewIsVideo(true);
+        try {
+          const result = await predictVideo(file, sessionId);
+          if (result.observations.length > 0) {
+            setLatest(result.observations[result.observations.length - 1]);
+          }
+          await refreshHistory(sessionId);
+        } catch (e) {
+          setError(e instanceof Error ? e.message : "Video processing failed");
+        } finally {
+          setLoading(false);
+          setLoadingMessage(null);
+        }
+        return;
+      }
+
+      if (file.size > MAX_IMAGE_BYTES) {
         setError(`Image is too large (${(file.size / 1024 / 1024).toFixed(1)}MB) — max is 10MB.`);
         return;
       }
 
       setLoading(true);
       setPreviewUrl(URL.createObjectURL(file));
+      setPreviewIsVideo(false);
       try {
         const result = await predict(file, sessionId);
         setLatest(result);
@@ -87,6 +129,7 @@ export default function App() {
         const blob = await res.blob();
         const file = new File([blob], filename, { type: blob.type || "image/jpeg" });
         setPreviewUrl(URL.createObjectURL(file));
+        setPreviewIsVideo(false);
         const result = await predict(file, sessionId);
         setLatest(result);
         await refreshHistory(sessionId);
@@ -111,6 +154,7 @@ export default function App() {
     setSessionId(sid);
     setLatest(null);
     setPreviewUrl(null);
+    setPreviewIsVideo(false);
     setHistory([]);
     setError(null);
   };
@@ -156,13 +200,15 @@ export default function App() {
             <input
               ref={fileInputRef}
               type="file"
-              accept="image/jpeg,image/png,image/webp"
+              accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime,video/webm,video/x-msvideo"
               onChange={(e) => {
                 const file = e.target.files?.[0];
                 if (file) handleFile(file);
               }}
             />
-            {loading ? "Analyzing…" : "Drop a track image here, or click to upload"}
+            {loading
+              ? loadingMessage ?? "Analyzing…"
+              : "Drop a track photo or short video here, or click to upload"}
           </div>
 
           <div className="sample-row">
@@ -170,14 +216,23 @@ export default function App() {
             <button onClick={() => loadSample("/samples/sample-dry.jpg", "sample-dry.jpg")} disabled={loading}>
               Try a dry sample
             </button>
+            <button onClick={() => loadSample("/samples/sample-damp.jpg", "sample-damp.jpg")} disabled={loading}>
+              Try a damp sample
+            </button>
             <button onClick={() => loadSample("/samples/sample-wet.jpg", "sample-wet.jpg")} disabled={loading}>
               Try a wet sample
             </button>
           </div>
 
-          {previewUrl && <img src={previewUrl} alt="uploaded track frame" className="preview-img" />}
+          {previewUrl && previewIsVideo && (
+            <video src={previewUrl} className="preview-img" controls muted />
+          )}
+          {previewUrl && !previewIsVideo && (
+            <img src={previewUrl} alt="uploaded track frame" className="preview-img" />
+          )}
           <p className="sample-credit">
-            Sample photos: Wikimedia Commons, CC BY 2.0 / CC BY-SA 2.0 (2010 Chinese GP; Safety Car in Heavy Rain).
+            Sample photos: Wikimedia Commons, CC BY 2.0 / CC BY-SA 2.0 / CC BY-SA 4.0
+            (2010 Chinese GP; 2021 Russian GP starting grid; Safety Car in Heavy Rain).
           </p>
         </div>
 

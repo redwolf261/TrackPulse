@@ -1,0 +1,27 @@
+{
+  "racing_eval_49": {
+    "n_images": 49,
+    "max_logit_diff": 4.57763671875e-05,
+    "mean_logit_diff": 1.4721054811866915e-05,
+    "max_prob_diff": 8.732080459594727e-06,
+    "mean_prob_diff": 1.703688644274549e-06,
+    "prediction_mismatches": 0
+  },
+  "racing_eval_67": {
+    "n_images": 67,
+    "max_logit_diff": 4.57763671875e-05,
+    "mean_logit_diff": 1.3783740908352298e-05,
+    "max_prob_diff": 8.732080459594727e-06,
+    "mean_prob_diff": 1.387669052197018e-06,
+    "prediction_mismatches": 0
+  },
+  "rscd_test_305": {
+    "n_images": 305,
+    "max_logit_diff": 0.00032901763916015625,
+    "mean_logit_diff": 2.542618112485917e-05,
+    "max_prob_diff": 1.6987323760986328e-05,
+    "mean_prob_diff": 1.5985035540796408e-06,
+    "prediction_mismatches": 0
+  },
+  "tolerance_note": "prediction_mismatches counted where argmax(pt_probs) != argmax(onnx_probs); max_prob_diff is max abs diff in softmax probability across all classes/images"
+}

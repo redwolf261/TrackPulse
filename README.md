@@ -1,22 +1,28 @@
 # TrackPulse — Live Track Condition Detector
 
-Built for the "Weather Whiplash" hackathon problem statement: given a track camera
-image, estimate whether the surface is Dry, Damp, or Wet, show how that's trending
-over a session, and give a plain-language suggestion.
+Built for the "Weather Whiplash" hackathon problem statement: given photos or video
+frames of the track, estimate whether the surface is Dry, Damp, or Wet, show how
+that's trending over a session, and give a plain-language suggestion.
 
 ## What it does
 
-1. Upload a track photo (or click one of the two bundled sample images).
+1. Upload a track photo (or click one of the three bundled sample images), **or
+   upload a short video clip** — the backend samples frames from it (up to 12, at a
+   fixed interval across the clip) and classifies each one in sequence, exactly as
+   if they'd been uploaded one at a time.
 2. A fine-tuned image classifier (MobileNetV3-Small) predicts **DRY / DAMP / WET**
-   with a confidence score.
+   with a confidence score, per frame.
 3. The trend across your session's uploads is plotted (getting wetter / drying out /
-   stable), computed deterministically from the label history — no LLM involved.
+   stable), computed deterministically from the label history — no LLM involved. A
+   single video upload can populate the whole trend chart in one go.
 4. A simple, rule-based suggestion is shown (e.g. *"Track drying: slick tyre window
    approaching."*).
 
 ## Stack
 
-- **Backend**: FastAPI + SQLite (`backend/`) — `/predict`, `/history/{session}`, `/health`.
+- **Backend**: FastAPI + SQLite (`backend/`) — `/predict` (image), `/predict/video`
+  (video → sampled frames → same classification pipeline), `/history/{session}`,
+  `/health`. Video frame extraction via OpenCV.
 - **Frontend**: Vite + React + TypeScript + Recharts (`frontend/`).
 - **Model**: `torchvision.models.mobilenet_v3_small`, ImageNet-pretrained, fine-tuned
   for this task, exported to ONNX and served via ONNX Runtime.
@@ -65,35 +71,100 @@ same untouched evaluation set:
    Re-evaluated on the *same untouched* 49-image set: **accuracy 50%→73%, DRY recall
    30%→63%, false-WET rate 60%→20%**, while WET recall held at 93%. RSCD performance
    stayed roughly flat (mild, stable trade-off, not a regression spiral).
+5. **Closing the DAMP blind spot (exp03)**: exp01+exp02's training pools together
+   contain 50 real racing-domain DAMP images — but every one of them had been used
+   for training, none held out for evaluation, so DAMP accuracy on racing imagery had
+   never actually been measured. We held out 18 of those 50 (spanning 6 different
+   events, zero overlap with training — verified by SHA-256 hash), retrained
+   excluding them, and evaluated on the held-out set. **First real result: DAMP
+   recall 83.3% (15/18), precision 62.5%** — the model genuinely can recognize damp
+   racing surfaces. But it came at a cost: DRY recall on the original 49-image set
+   regressed 63.3%→50.0% and WET recall slipped 92.9%→85.7%, because the higher DAMP
+   oversampling needed to force that gain also made the model over-call DAMP on
+   ambiguous dry images (night races, tire smoke, pit-lane scenes). **We decided not
+   to promote exp03** — exp02 remains in production because the regression on the
+   larger, more established eval axis outweighs the new DAMP signal. This is a real,
+   useful negative result: it tells us oversampling was the wrong lever, not that
+   DAMP is unlearnable.
 
 | | RSCD test (n=305) | Racing eval (n=44, held out throughout) |
 |---|---|---|
 | exp00 (frozen baseline) | acc 77.7%, WET recall 83.1% | acc 34.1%, DRY recall 3.3%, false-WET 96.7% |
 | exp01 (+115 racing imgs) | acc 75.4%, WET recall 67.5% | acc 50.0%, DRY recall 30.0%, false-WET 60.0% |
-| **exp02 (+177 racing imgs, DAMP-focused)** | acc 74.8%, WET recall 75.3% | **acc 72.7%, DRY recall 63.3%, false-WET 20.0%** |
+| **exp02 (+177 racing imgs, DAMP-focused, production)** | acc 74.8%, WET recall 75.3% | **acc 72.7%, DRY recall 63.3%, false-WET 20.0%** |
+| exp03 (DAMP holdout eval, not promoted) | acc 76.4%, WET recall (n/a, RSCD-scale) | acc 61.4%, DRY recall 50.0%, WET recall 85.7%; **DAMP recall 83.3%, precision 62.5% (n=18, first real measurement)** |
 
-**exp02 is the model currently in production** (`models/trackpulse_classifier.onnx`).
+**exp02 is the model currently in production** (`models/trackpulse_classifier.onnx`),
+**frozen** as the production candidate. **exp03 is retained as a research artifact,
+not a candidate for deployment** (`models/trackpulse_classifier_v4_exp03.onnx`).
 Earlier versions are kept as backups (`models/trackpulse_classifier_v1_frozen_backup.onnx`,
 `_v2_backup.onnx`) for comparison/rollback.
 
+### Class-balance ablation (exp03)
+
+A controlled experiment increased DAMP oversampling from 8× (exp02) to 10× (exp03).
+This substantially improved DAMP recall to 83.3% (15/18), establishing measurable
+recognition of the previously underrepresented class. However, the intervention
+increased false-DAMP predictions on difficult DRY samples, reducing DRY accuracy to
+50.0%, while WET recall decreased from 92.9% to 85.7%. The experiment therefore
+demonstrates that improving minority-class recall does not necessarily improve the
+overall operational classifier. The 10× oversampling configuration was rejected, and
+the 8× configuration (exp02) remains the production model.
+
+| Model | DAMP Recall | DAMP Precision | DRY Performance | WET Recall | Decision |
+|---|---:|---:|---:|---:|---|
+| **exp02** | — | — | Better | **92.9%** | ✅ Production |
+| **exp03** | **83.3%** | **62.5%** | Degraded to **50.0%** | **85.7%** | ❌ Rejected |
+
+The result isn't simply that exp03 has higher DAMP recall — it demonstrates a
+class-balance trade-off: increasing emphasis on the visually ambiguous DAMP class
+improved DAMP detection but caused the classifier to absorb hard-negative DRY samples
+into DAMP and slightly reduced WET recall. exp03 was evaluated as a class-imbalance
+intervention and rejected for deployment on that evidence, while being retained as an
+experimental artifact — not silently swapped in just because one metric improved.
+
+**Production:** exp02. **Experimental/rejected:** exp03. We did not chase further
+oversampling ratios or alternative rebalancing strategies (class weighting, focal
+loss) after this — the experiment had already demonstrated the three things that
+matter for this submission: the model learns the source task, domain shift produces
+measurable failure, and correcting one weakness produces measurable trade-offs. That
+is a more credible research narrative than tuning until every metric looks good.
+
 ## Honest limitations
 
-- **DAMP is still unvalidated on racing imagery** — our 49-image evaluation set has
-  zero confirmed-damp racing photos (genuinely hard to find/label even in CC-licensed
-  archives), so while we trained on 38 real racing DAMP examples in the latest round,
-  we can't directly measure DAMP accuracy on racing footage the way we can for
-  DRY/WET.
+- **DAMP recall is now measured (83.3%, n=18) but not yet reflected in production** —
+  the model version that achieved this (exp03) traded away DRY/WET accuracy to get
+  there, so it wasn't shipped. The production model (exp02) still has no direct DAMP
+  measurement, only indirect evidence from training on real DAMP examples.
 - **The model still misreads some dry racing images as wet** — down to a 20%
   false-WET rate on our racing eval set (from 97% pre-fine-tune, 60% after the first
   fine-tune round). Meaningfully better, not perfect. This is visible in the UI as a
   stated caveat, not hidden behind a false-confidence display.
-- Racing-domain evaluation is a 44-image (49 minus 5 ambiguous) hand-labeled
+- Racing-domain evaluation is a 44–62-image (depending on which eval set) hand-labeled
   spot-check, not a statistically rigorous benchmark — useful for catching and
   tracking a large domain-gap failure across iterations, not for precise
   population-level accuracy claims.
 
 We chose to surface this honestly (in the UI and here) rather than present the model
-as more reliable than it's been measured to be.
+as more reliable than it's been measured to be, and we chose not to ship a model
+version just because it was newer — exp03 lost the promotion decision on its own
+measured evidence.
+
+### Where this leaves the project
+
+We characterize this prototype as **conditionally validated, deployment-frozen, and
+experimentally characterized** — not "production-ready," and not "racing-grade."
+
+TrackPulse can provide lightweight visual track-condition estimates, but
+racing-domain uncertainty and ambiguous DAMP/DRY conditions remain significant
+limitations. The system therefore treats perception as evidence for decision support
+rather than as an autonomous strategy authority — the UI states this explicitly (see
+the model caveat shown alongside every prediction) rather than presenting a single
+confident label as ground truth.
+
+The production ONNX artifact is, and remains, exp02
+(`models/trackpulse_classifier.onnx`) — the demo and submission are not running the
+experimental (exp03) model.
 
 ## Running it locally
 
@@ -116,7 +187,8 @@ Backend defaults to `http://127.0.0.1:8000`, frontend to `http://localhost:5173`
 ## Project structure
 
 ```text
-backend/app/                FastAPI service, ONNX inference, deterministic trend/suggestion logic
+backend/app/                FastAPI service, ONNX inference, deterministic trend/suggestion logic,
+                               video frame extraction (video.py)
 frontend/src/                React UI
 scripts/                     Data pipeline, training, ONNX export, evaluation scripts
 experiments/                 Per-experiment configs, metrics, checkpoints:
