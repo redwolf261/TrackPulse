@@ -1,0 +1,12 @@
+{
+  "python_version": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "torch_version": "2.11.0+cu128",
+  "torchvision_version": "0.26.0+cu128",
+  "cuda_version": "12.8",
+  "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "sklearn_version": "1.9.0",
+  "pandas_version": "3.0.3",
+  "numpy_version": "2.5.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "random_seed": 42
+}

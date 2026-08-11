@@ -1,0 +1,23 @@
+{
+  "experiment": "exp01_racing_finetune",
+  "init_checkpoint": "c:/Users/Rivan/Projects/AI_Grand_Prix/experiments/exp00_rscd_baseline/checkpoints/best_model.pth",
+  "rscd_train_n": 2582,
+  "rscd_val_n": 379,
+  "racing_train_n_raw": 97,
+  "racing_train_oversample_factor": 6,
+  "racing_val_n": 18,
+  "combined_train_n": 3164,
+  "combined_val_n": 397,
+  "combined_train_class_counts": {
+    "DRY": 1297,
+    "DAMP": 891,
+    "WET": 976
+  },
+  "lr": 0.0003,
+  "epochs_max": 12,
+  "epochs_run": 8,
+  "best_val_macro_f1": 0.7884380507547677,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "seed": 42
+}

@@ -1,0 +1,25 @@
+{
+  "method": "SHA-256 whole-file hash comparison",
+  "eval_dirs_checked": [
+    "C:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images",
+    "C:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2"
+  ],
+  "exp01_pool_dir_checked": "C:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_train_pool/images",
+  "v2_pool_dir": "C:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_train_pool_v2/images",
+  "n_eval_hashes": 49,
+  "n_exp01_hashes": 115,
+  "n_v2_hashes_prefilter": 183,
+  "n_eval_collisions_removed": 3,
+  "eval_collision_files": [
+    "racetrainv2_046_DRY_Jarno Trulli 2008 Britain 2.jpg",
+    "racetrainv2_060_DRY_Alonso _ Heidfeld 2008 Britain.jpg",
+    "racetrainv2_132_DAMP_Hamilton Silverstone 2008.jpg"
+  ],
+  "n_exp01_collisions_removed": 2,
+  "exp01_collision_files": [
+    "racetrainv2_016_DRY_2019 11 GER Qualy.png",
+    "racetrainv2_125_DAMP_Hamilton - 2016 Monaco GP 01.jpg"
+  ],
+  "n_internal_dupes_removed": 0,
+  "final_v2_manifest_count": 178
+}

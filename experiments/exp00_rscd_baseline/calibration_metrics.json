@@ -1,0 +1,78 @@
+{
+  "brier_score_multiclass": 0.3321486861947675,
+  "ece_10bin": 0.08188495811868884,
+  "n_test_samples": 305,
+  "bin_stats": [
+    {
+      "bin_lo": 0.0,
+      "bin_hi": 0.1,
+      "n": 0,
+      "avg_confidence": null,
+      "avg_accuracy": null
+    },
+    {
+      "bin_lo": 0.1,
+      "bin_hi": 0.2,
+      "n": 0,
+      "avg_confidence": null,
+      "avg_accuracy": null
+    },
+    {
+      "bin_lo": 0.2,
+      "bin_hi": 0.30000000000000004,
+      "n": 0,
+      "avg_confidence": null,
+      "avg_accuracy": null
+    },
+    {
+      "bin_lo": 0.30000000000000004,
+      "bin_hi": 0.4,
+      "n": 3,
+      "avg_confidence": 0.3801785310109456,
+      "avg_accuracy": 0.6666666666666666
+    },
+    {
+      "bin_lo": 0.4,
+      "bin_hi": 0.5,
+      "n": 13,
+      "avg_confidence": 0.4559643818781926,
+      "avg_accuracy": 0.5384615384615384
+    },
+    {
+      "bin_lo": 0.5,
+      "bin_hi": 0.6000000000000001,
+      "n": 30,
+      "avg_confidence": 0.5565994064013163,
+      "avg_accuracy": 0.5
+    },
+    {
+      "bin_lo": 0.6000000000000001,
+      "bin_hi": 0.7000000000000001,
+      "n": 18,
+      "avg_confidence": 0.6602325240770975,
+      "avg_accuracy": 0.5555555555555556
+    },
+    {
+      "bin_lo": 0.7000000000000001,
+      "bin_hi": 0.8,
+      "n": 41,
+      "avg_confidence": 0.7497255278796684,
+      "avg_accuracy": 0.6829268292682927
+    },
+    {
+      "bin_lo": 0.8,
+      "bin_hi": 0.9,
+      "n": 38,
+      "avg_confidence": 0.8525682719130265,
+      "avg_accuracy": 0.7368421052631579
+    },
+    {
+      "bin_lo": 0.9,
+      "bin_hi": 1.0,
+      "n": 162,
+      "avg_confidence": 0.9834844208793876,
+      "avg_accuracy": 0.9074074074074074
+    }
+  ],
+  "note": "Probability outputs are model confidence scores, NOT physical measurements. P(WET)=0.73 means the model assigns 0.73 probability to class WET, not that 73% of the road surface is wet."
+}

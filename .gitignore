@@ -1,0 +1,23 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Local runtime state
+backend/trackpulse.db
+*.log
+
+# Raw downloaded dataset snapshot (large, regeneratable from HF Hub — see README)
+data/_hf_snapshot/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files with local overrides (frontend/.env is intentionally tracked — see below)
+*.env.local
+scratchpad/

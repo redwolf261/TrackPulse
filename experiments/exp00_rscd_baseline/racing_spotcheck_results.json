@@ -1,0 +1,164 @@
+{
+  "n_images": 13,
+  "prediction_distribution": {
+    "WET": 13
+  },
+  "results": [
+    {
+      "filename": "racing_00.jpg",
+      "source_title": "File:16 Maldonado Wet (9186385580).jpg",
+      "license": "CC BY 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9944278001785278,
+      "probs": {
+        "DRY": 0.0034662645775824785,
+        "DAMP": 0.00210591615177691,
+        "WET": 0.9944278001785278
+      }
+    },
+    {
+      "filename": "racing_01.jpg",
+      "source_title": "File:2011 Canadian GP - Force India.jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9970256686210632,
+      "probs": {
+        "DRY": 0.0023629511706531048,
+        "DAMP": 0.0006114410352893174,
+        "WET": 0.9970256686210632
+      }
+    },
+    {
+      "filename": "racing_02.jpg",
+      "source_title": "File:2011 Canadian GP - Race stop.jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9549717903137207,
+      "probs": {
+        "DRY": 0.023403827100992203,
+        "DAMP": 0.021624386310577393,
+        "WET": 0.9549717903137207
+      }
+    },
+    {
+      "filename": "racing_03.jpg",
+      "source_title": "File:2011 Canadian GP - Water.jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9330498576164246,
+      "probs": {
+        "DRY": 0.05902699753642082,
+        "DAMP": 0.007923167198896408,
+        "WET": 0.9330498576164246
+      }
+    },
+    {
+      "filename": "racing_04.jpg",
+      "source_title": "File:2012 British GP - Kovalainen.jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9961034059524536,
+      "probs": {
+        "DRY": 0.0038020045030862093,
+        "DAMP": 9.454897372052073e-05,
+        "WET": 0.9961034059524536
+      }
+    },
+    {
+      "filename": "racing_05.jpg",
+      "source_title": "File:2012 British GP - Lotus.jpg",
+      "license": "CC BY 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9924079179763794,
+      "probs": {
+        "DRY": 0.007540727965533733,
+        "DAMP": 5.137792322784662e-05,
+        "WET": 0.9924079179763794
+      }
+    },
+    {
+      "filename": "racing_06.jpg",
+      "source_title": "File:2012 British GP - Massa.jpg",
+      "license": "CC BY 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9990942478179932,
+      "probs": {
+        "DRY": 0.0007648778846487403,
+        "DAMP": 0.00014093221398070455,
+        "WET": 0.9990942478179932
+      }
+    },
+    {
+      "filename": "racing_07.jpg",
+      "source_title": "File:Adrian Sutil 2010 Malaysia 3rd Qualify.jpg",
+      "license": "CC BY-SA 3.0",
+      "predicted_class": "WET",
+      "confidence": 0.9886623024940491,
+      "probs": {
+        "DRY": 0.010727151297032833,
+        "DAMP": 0.0006104925414547324,
+        "WET": 0.9886623024940491
+      }
+    },
+    {
+      "filename": "racing_08.jpg",
+      "source_title": "File:Alguersuari Malaysian qualy 2010.jpg",
+      "license": "CC BY 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9906635284423828,
+      "probs": {
+        "DRY": 0.008567425422370434,
+        "DAMP": 0.0007690589409321547,
+        "WET": 0.9906635284423828
+      }
+    },
+    {
+      "filename": "racing_09.jpg",
+      "source_title": "File:Safety Car in Heavy Rain (Mercedes AMG GT S) (37876671395).jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9974326491355896,
+      "probs": {
+        "DRY": 0.0025327096227556467,
+        "DAMP": 3.468511567916721e-05,
+        "WET": 0.9974326491355896
+      }
+    },
+    {
+      "filename": "racing_10.jpg",
+      "source_title": "File:Eau Rouge McLaren (4948374927).jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.9941656589508057,
+      "probs": {
+        "DRY": 0.004844215232878923,
+        "DAMP": 0.000990093220025301,
+        "WET": 0.9941656589508057
+      }
+    },
+    {
+      "filename": "racing_11.jpg",
+      "source_title": "File:Felipe Massa (4948409977).jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.7602439522743225,
+      "probs": {
+        "DRY": 0.2091459035873413,
+        "DAMP": 0.0306101031601429,
+        "WET": 0.7602439522743225
+      }
+    },
+    {
+      "filename": "racing_12.jpg",
+      "source_title": "File:Fernando Alonso Belgium GP 2010.jpg",
+      "license": "CC BY-SA 2.0",
+      "predicted_class": "WET",
+      "confidence": 0.989382266998291,
+      "probs": {
+        "DRY": 0.007284282706677914,
+        "DAMP": 0.0033334456384181976,
+        "WET": 0.989382266998291
+      }
+    }
+  ]
+}

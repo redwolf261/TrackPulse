@@ -1,0 +1,25 @@
+{
+  "onnx_file_size_bytes": 6093335,
+  "onnx_file_size_mb": 5.811057090759277,
+  "cpu": {
+    "label": "CPU",
+    "active_providers": [
+      "CPUExecutionProvider"
+    ],
+    "n_warmup": 10,
+    "n_runs": 200,
+    "latency_ms": {
+      "p50": 1.782400000593043,
+      "p95": 2.760555000168096,
+      "p99": 3.6342290016909797,
+      "mean": 1.8667580001238093
+    },
+    "fps": 535.6880752265033,
+    "process_rss_mb": {
+      "before": 70.390625,
+      "after": 75.81640625,
+      "delta": 5.42578125
+    }
+  },
+  "gpu": null
+}

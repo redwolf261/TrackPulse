@@ -1,0 +1,61 @@
+{
+  "total_files_on_disk": 5393,
+  "parsed_records": 5393,
+  "unparsed_filenames": [],
+  "condition_vocab": {
+    "dry": 1884,
+    "wet": 1534,
+    "water": 1208,
+    "ice": 278,
+    "melted_snow": 253,
+    "fresh_snow": 236
+  },
+  "material_vocab": {
+    "asphalt": 1666,
+    "concrete": 1600,
+    "mud": 759,
+    "None": 767,
+    "gravel": 601
+  },
+  "surface_vocab": {
+    "smooth": 1550,
+    "slight": 1069,
+    "severe": 647,
+    "None": 2127
+  },
+  "full_label_distribution": {
+    "dry-asphalt-smooth": 248,
+    "wet-asphalt-smooth": 272,
+    "dry-concrete-smooth": 257,
+    "wet-concrete-slight": 91,
+    "water-concrete-slight": 87,
+    "dry-asphalt-slight": 283,
+    "dry-asphalt-severe": 92,
+    "wet-concrete-severe": 70,
+    "dry-concrete-slight": 262,
+    "wet-concrete-smooth": 238,
+    "wet-asphalt-slight": 267,
+    "water-mud": 247,
+    "wet-asphalt-severe": 78,
+    "water-asphalt-severe": 89,
+    "water-concrete-smooth": 277,
+    "ice": 278,
+    "melted_snow": 253,
+    "fresh_snow": 236,
+    "water-asphalt-smooth": 258,
+    "water-concrete-severe": 76,
+    "dry-concrete-severe": 242,
+    "dry-mud": 252,
+    "wet-mud": 260,
+    "dry-gravel": 248,
+    "wet-gravel": 258,
+    "water-asphalt-slight": 79,
+    "water-gravel": 95
+  },
+  "timestamp_length_distribution": {
+    "16": 1124,
+    "15": 1584,
+    "17": 2280,
+    "18": 405
+  }
+}

@@ -1,0 +1,296 @@
+[
+  {
+    "image_id": "racing_00.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_00.jpg",
+    "basename": "racing_00.jpg",
+    "sha256": "1b030b2a3d61938dde7f6ae7e20a4b8ef97c67b4f4b9096e5e8497d3e118024a"
+  },
+  {
+    "image_id": "racing_01.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_01.jpg",
+    "basename": "racing_01.jpg",
+    "sha256": "b2d7d142bceca30264377dcae7076b1a5513f4ea338bf3fb5dd763739f431898"
+  },
+  {
+    "image_id": "racing_02.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_02.jpg",
+    "basename": "racing_02.jpg",
+    "sha256": "0b0877e14ed1718e8600e5651319ad55441a6b8326d6bae4d5fdd24354c27808"
+  },
+  {
+    "image_id": "racing_03.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_03.jpg",
+    "basename": "racing_03.jpg",
+    "sha256": "c9c5112193a092eec0df8919518068ca6679aa311b7b61e390a09e822d9a5c45"
+  },
+  {
+    "image_id": "racing_04.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_04.jpg",
+    "basename": "racing_04.jpg",
+    "sha256": "fbcbb02fbf6b10b3e56e089d3cfc6066ad477059a35b64fbfca4159e2d5bd542"
+  },
+  {
+    "image_id": "racing_05.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_05.jpg",
+    "basename": "racing_05.jpg",
+    "sha256": "09719372d3525d37e47dc0ca4f73ddeda28ebb2211a8c7833141d28d45a4448f"
+  },
+  {
+    "image_id": "racing_06.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_06.jpg",
+    "basename": "racing_06.jpg",
+    "sha256": "e871efcd285a1713cd29351c4c1f0a3673b6a6169b904b7e5720c12f6957247d"
+  },
+  {
+    "image_id": "racing_07.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_07.jpg",
+    "basename": "racing_07.jpg",
+    "sha256": "d0be4d7307ff4feea544901cce49eca4b778e12364fb350d463a95dcfc80dde1"
+  },
+  {
+    "image_id": "racing_08.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_08.jpg",
+    "basename": "racing_08.jpg",
+    "sha256": "5336fcf9047bba5690c2bcca553a8cdc419438ecc73d5c0e291819b0be72c7ba"
+  },
+  {
+    "image_id": "racing_09.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_09.jpg",
+    "basename": "racing_09.jpg",
+    "sha256": "61e080d51687f271739a90522b00a3d2f8444092b4ae44daa75c8f61050c4993"
+  },
+  {
+    "image_id": "racing_10.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_10.jpg",
+    "basename": "racing_10.jpg",
+    "sha256": "4a2825ed3a866399dc50aff158890bd159fb3e0ae175c39cf87745f095e8388b"
+  },
+  {
+    "image_id": "racing_11.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_11.jpg",
+    "basename": "racing_11.jpg",
+    "sha256": "699c1ac624861f0ec4f0961b1d26e1e7906b33e0ba33239586907f622b12b712"
+  },
+  {
+    "image_id": "racing_12.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images/racing_12.jpg",
+    "basename": "racing_12.jpg",
+    "sha256": "19042d45bb0134cc6d85f7e57d1dca4eab2379ad1d5be5aec69b00d68e80d7af"
+  },
+  {
+    "image_id": "contrast_00.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_00.jpg",
+    "basename": "contrast_00.jpg",
+    "sha256": "4c6851716f7317e75d7f13e57a732e22898ef8f85130905aab62dcb8c0a2daa0"
+  },
+  {
+    "image_id": "contrast_01.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_01.jpg",
+    "basename": "contrast_01.jpg",
+    "sha256": "984b09ec4b7faf16c965e836d1e34a947d5c534fe9a00b271fdf471d24e3e2d3"
+  },
+  {
+    "image_id": "contrast_02.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_02.jpg",
+    "basename": "contrast_02.jpg",
+    "sha256": "0e236dc961d5f235fa03f7f4453aa9cbf799eae643b34fe72f1c868d2ea4460e"
+  },
+  {
+    "image_id": "contrast_03.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_03.jpg",
+    "basename": "contrast_03.jpg",
+    "sha256": "531d971f62347f1f2770738512e2b04bf23dc63cd53bd57cea40420468e23ca9"
+  },
+  {
+    "image_id": "contrast_04.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_04.jpg",
+    "basename": "contrast_04.jpg",
+    "sha256": "e438963305e14c0c0e39729cb2af73ec5e96176cb1f0c38ffd25eb4a87e50b8b"
+  },
+  {
+    "image_id": "contrast_05.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_05.jpg",
+    "basename": "contrast_05.jpg",
+    "sha256": "eea1f3aed3790368a6c346e343349a3f1ba60fb59cfbe623b41d23bddb7b9831"
+  },
+  {
+    "image_id": "contrast_06.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_06.jpg",
+    "basename": "contrast_06.jpg",
+    "sha256": "9ecec9d0a631d09fc50b7668d24f32c633e1eaa44379a5d9d128612aa3340f63"
+  },
+  {
+    "image_id": "contrast_07.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_07.jpg",
+    "basename": "contrast_07.jpg",
+    "sha256": "d4a5493d3d995d576eb64f81c0f1a12272812690681d8e2d4621ec1e3f5d0e87"
+  },
+  {
+    "image_id": "contrast_08.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_08.jpg",
+    "basename": "contrast_08.jpg",
+    "sha256": "dfbd80d0becb750df2b85b2af1c84489dabf914479b52f13c4cf2d50fbf5f324"
+  },
+  {
+    "image_id": "contrast_09.JPG",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_09.JPG",
+    "basename": "contrast_09.jpg",
+    "sha256": "e551d9dbda91910e883b464e2a12a97c5c3f8575ef9fe61f89a209ae1973e6f8"
+  },
+  {
+    "image_id": "contrast_10.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_10.jpg",
+    "basename": "contrast_10.jpg",
+    "sha256": "25cecd1972ac46e7e5abb6a3474fa32c5421e37df4cd9cc60ecac5c1fe9f3dbd"
+  },
+  {
+    "image_id": "contrast_11.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_11.jpg",
+    "basename": "contrast_11.jpg",
+    "sha256": "6df92d9ac2b34f26809cce72a64be9d6f179214ce44dd705edd7e44c2c22b6b3"
+  },
+  {
+    "image_id": "contrast_12.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_12.jpg",
+    "basename": "contrast_12.jpg",
+    "sha256": "1bfb11f35d11a347b4a6a6ef57aca114c351c6093b483579f05c768a444d697a"
+  },
+  {
+    "image_id": "contrast_13.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_13.jpg",
+    "basename": "contrast_13.jpg",
+    "sha256": "dd123e90b9d84497f83df17efa1db7d4e878803da08f05e5b1d8c5885c44f563"
+  },
+  {
+    "image_id": "contrast_14.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_14.jpg",
+    "basename": "contrast_14.jpg",
+    "sha256": "2671c94261ffb37bc2c664fbc6e08642bd8fecb59a2559d376bb27a11b686a6e"
+  },
+  {
+    "image_id": "contrast_15.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_15.jpg",
+    "basename": "contrast_15.jpg",
+    "sha256": "e4af41be205fdaa8e57c5ed358213756ace300b7adaa9615f204d64ffdca9b60"
+  },
+  {
+    "image_id": "contrast_16.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_16.jpg",
+    "basename": "contrast_16.jpg",
+    "sha256": "7b3a559090a3c6b0fcd550ef0caae48aec93b17156409c43af743fd2da2e3117"
+  },
+  {
+    "image_id": "contrast_17.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_17.jpg",
+    "basename": "contrast_17.jpg",
+    "sha256": "1bd069d62a87bda7ca255748d8fe0a0868898fb4e249ca061f9c9fab5933f345"
+  },
+  {
+    "image_id": "contrast_18.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_18.jpg",
+    "basename": "contrast_18.jpg",
+    "sha256": "b51f1354fad7591a790a909bea2a20181361abe8c41c9d71b9a378e9c6dc6e74"
+  },
+  {
+    "image_id": "contrast_19.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_19.jpg",
+    "basename": "contrast_19.jpg",
+    "sha256": "8bdb970746963c43992082fc7e974feda70ea47fa91b54ac03dfc77b27ebaaee"
+  },
+  {
+    "image_id": "contrast_20.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_20.jpg",
+    "basename": "contrast_20.jpg",
+    "sha256": "c3e9b45da6d05b05332d452c8ddf224eb405032504001d246009d4fe799f7182"
+  },
+  {
+    "image_id": "contrast_21.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_21.jpg",
+    "basename": "contrast_21.jpg",
+    "sha256": "a8b299e437937671eba435f08e3aaf4dde37ca0571296dce13529f4460846c0b"
+  },
+  {
+    "image_id": "contrast_22.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_22.jpg",
+    "basename": "contrast_22.jpg",
+    "sha256": "4d788693233070c3fbe91de29107cb0593ead0dec5f5f38582e453dc8dd25300"
+  },
+  {
+    "image_id": "contrast_23.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_23.jpg",
+    "basename": "contrast_23.jpg",
+    "sha256": "798b3bc452ec75731ba8dadb624c50199bdc4bd059c89a83a56fb3731886425a"
+  },
+  {
+    "image_id": "contrast_24.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_24.jpg",
+    "basename": "contrast_24.jpg",
+    "sha256": "78cbb2a1eae9a197fe7a3ecc1829312c2b4243efe7c43caa0d4af5828845c753"
+  },
+  {
+    "image_id": "contrast_25.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_25.jpg",
+    "basename": "contrast_25.jpg",
+    "sha256": "89ff9b6308256a9aefceaf64eebc8c11e2610b72a9e653204b2cd22312ec286e"
+  },
+  {
+    "image_id": "contrast_26.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_26.jpg",
+    "basename": "contrast_26.jpg",
+    "sha256": "c5b52257c59ac265c5fcd46cad106d6567ed15d206f71d7df3f777e25dd558bf"
+  },
+  {
+    "image_id": "contrast_27.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_27.jpg",
+    "basename": "contrast_27.jpg",
+    "sha256": "b0a76f048eb0b0b2e1af14e380b123e14e5021830f00a47e1b3aacbffa6d9e7c"
+  },
+  {
+    "image_id": "contrast_28.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_28.jpg",
+    "basename": "contrast_28.jpg",
+    "sha256": "134f33a666018b1b26b6f2f72e253eb0c5616f42162bc88f208045d5c203957d"
+  },
+  {
+    "image_id": "contrast_29.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_29.jpg",
+    "basename": "contrast_29.jpg",
+    "sha256": "839b03de02a22139a80e0ff5f4f24217c6c484e654f280d56e363e1b6b24a81c"
+  },
+  {
+    "image_id": "contrast_30.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_30.jpg",
+    "basename": "contrast_30.jpg",
+    "sha256": "d753c01572e0fe5eaac60755739f1add0ae6dc62e13081e929771e7a2be94add"
+  },
+  {
+    "image_id": "contrast_31.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_31.jpg",
+    "basename": "contrast_31.jpg",
+    "sha256": "1531857ba12c3df59fcf52db7dcfeea70edd60c5982714e6560ae1a1ae597cdd"
+  },
+  {
+    "image_id": "contrast_32.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_32.jpg",
+    "basename": "contrast_32.jpg",
+    "sha256": "f8ec464d75bcea1da67ac8791e0559cef0c3184ad6e9ee3929567487bd74531e"
+  },
+  {
+    "image_id": "contrast_33.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_33.jpg",
+    "basename": "contrast_33.jpg",
+    "sha256": "183c4da1b5b03ea228c15000d12742f61cbb323c77d26404e709311dc672e147"
+  },
+  {
+    "image_id": "contrast_34.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_34.jpg",
+    "basename": "contrast_34.jpg",
+    "sha256": "b4675e7ecd9c4e88a4adf90feb1a1f483c0d5942817b6d67d4182ba8f778425d"
+  },
+  {
+    "image_id": "contrast_35.jpg",
+    "filepath": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_spotcheck/images2/contrast_35.jpg",
+    "basename": "contrast_35.jpg",
+    "sha256": "3089cfa7d5fd3c46c077ce802ca3ee3d9d03ecefeda6749185bdaa304c9faa52"
+  }
+]

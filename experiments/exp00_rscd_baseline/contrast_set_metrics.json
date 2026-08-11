@@ -1,0 +1,105 @@
+{
+  "n_total": 49,
+  "n_labeled": 44,
+  "n_ambiguous": 5,
+  "confusion_matrix": [
+    [
+      1,
+      0,
+      29
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      14
+    ]
+  ],
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "accuracy": 0.3409090909090909,
+  "macro_f1": 0.18524806640256553,
+  "per_class": {
+    "DRY": {
+      "precision": 1.0,
+      "recall": 0.03333333333333333,
+      "f1": 0.06451612903225806,
+      "support": 30
+    },
+    "DAMP": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "WET": {
+      "precision": 0.32558139534883723,
+      "recall": 1.0,
+      "f1": 0.49122807017543857,
+      "support": 14
+    }
+  },
+  "false_wet_rate": 0.9666666666666667,
+  "false_wet_count": 29,
+  "false_wet_denominator": 30,
+  "false_dry_rate": 0.0,
+  "false_dry_count": 0,
+  "false_dry_denominator": 14,
+  "mean_confidence_all": 0.9367659335786646,
+  "mean_confidence_correct": 0.9494285662968953,
+  "mean_confidence_incorrect": 0.9302162959657866,
+  "ambiguous_descriptive": [
+    {
+      "image_id": "contrast_00.jpg",
+      "predicted_class": "WET",
+      "confidence": 0.8624916076660156,
+      "P_DRY": 0.12546172738075256,
+      "P_DAMP": 0.01204670500010252,
+      "P_WET": 0.8624916076660156,
+      "note": "track surface obscured by fence/crew"
+    },
+    {
+      "image_id": "contrast_08.jpg",
+      "predicted_class": "WET",
+      "confidence": 0.905920684337616,
+      "P_DRY": 0.06920509785413742,
+      "P_DAMP": 0.024874234572052956,
+      "P_WET": 0.905920684337616,
+      "note": "minimal surface visible"
+    },
+    {
+      "image_id": "contrast_09.JPG",
+      "predicted_class": "WET",
+      "confidence": 0.9203835129737854,
+      "P_DRY": 0.03291672468185425,
+      "P_DAMP": 0.046699825674295425,
+      "P_WET": 0.9203835129737854,
+      "note": "overcast garage, minimal surface visible"
+    },
+    {
+      "image_id": "contrast_11.jpg",
+      "predicted_class": "WET",
+      "confidence": 0.9760663509368896,
+      "P_DRY": 0.02239471860229969,
+      "P_DAMP": 0.001538919983431697,
+      "P_WET": 0.9760663509368896,
+      "note": "not genuine track surface, indoor rubber mat flooring with visible damp footprints"
+    },
+    {
+      "image_id": "contrast_34.jpg",
+      "predicted_class": "WET",
+      "confidence": 0.9592710733413696,
+      "P_DRY": 0.02009255811572075,
+      "P_DAMP": 0.020636359229683876,
+      "P_WET": 0.9592710733413696,
+      "note": "no track surface visible, crash/crane scene"
+    }
+  ]
+}

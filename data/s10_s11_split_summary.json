@@ -1,0 +1,28 @@
+{
+  "n_after_exact_dup_removal": 3266,
+  "n_groups_total": 1272,
+  "train_size": 2582,
+  "val_size": 379,
+  "test_size": 305,
+  "train_pct": 79.1,
+  "val_pct": 11.6,
+  "test_pct": 9.3,
+  "train_label_dist": {
+    "DRY": 1075,
+    "DAMP": 831,
+    "WET": 676
+  },
+  "val_label_dist": {
+    "DRY": 161,
+    "WET": 113,
+    "DAMP": 105
+  },
+  "test_label_dist": {
+    "DRY": 148,
+    "DAMP": 80,
+    "WET": 77
+  },
+  "group_leakage_verified_none": true,
+  "imbalance_ratio_train": 1.5902366863905326,
+  "balancing_decision": "class-weighted cross-entropy (inverse frequency), natural distribution otherwise"
+}

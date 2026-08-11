@@ -1,0 +1,215 @@
+{
+  "n_errors": 29,
+  "cause_distribution": {
+    "DARK_ASPHALT": 19,
+    "SHADOW": 2,
+    "REFLECTION": 5,
+    "SPRAY": 2,
+    "MOTION_BLUR": 1
+  },
+  "tagged_errors": [
+    {
+      "image_id": "contrast_01.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9857967495918274,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_02.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9000339508056641,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_03.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9069690108299255,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_04.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.789211630821228,
+      "primary_cause": "SHADOW"
+    },
+    {
+      "image_id": "contrast_05.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.8261538743972778,
+      "primary_cause": "SHADOW"
+    },
+    {
+      "image_id": "contrast_06.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9634311199188232,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_10.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9984924793243408,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_12.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9202980399131775,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_13.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9179802536964417,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_14.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.8435865640640259,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_15.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9917494058609009,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_16.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9996522665023804,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_17.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9904474020004272,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_18.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9777370095252991,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_20.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9960746765136719,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_21.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9904154539108276,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_22.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9873534440994263,
+      "primary_cause": "REFLECTION"
+    },
+    {
+      "image_id": "contrast_23.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9084528088569641,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_24.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9228429198265076,
+      "primary_cause": "REFLECTION"
+    },
+    {
+      "image_id": "contrast_25.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.8810496926307678,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_26.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9976634979248047,
+      "primary_cause": "SPRAY"
+    },
+    {
+      "image_id": "contrast_27.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9730283617973328,
+      "primary_cause": "SPRAY"
+    },
+    {
+      "image_id": "contrast_28.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9993064403533936,
+      "primary_cause": "MOTION_BLUR"
+    },
+    {
+      "image_id": "contrast_29.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.5372228026390076,
+      "primary_cause": "REFLECTION"
+    },
+    {
+      "image_id": "contrast_30.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.953650712966919,
+      "primary_cause": "REFLECTION"
+    },
+    {
+      "image_id": "contrast_31.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9523230195045471,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_32.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9274671077728271,
+      "primary_cause": "DARK_ASPHALT"
+    },
+    {
+      "image_id": "contrast_33.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9796139001846313,
+      "primary_cause": "REFLECTION"
+    },
+    {
+      "image_id": "contrast_35.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9582679867744446,
+      "primary_cause": "DARK_ASPHALT"
+    }
+  ]
+}

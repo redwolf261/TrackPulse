@@ -1,0 +1,72 @@
+experiment: exp00_rscd_baseline
+description: >
+  Frozen source-domain baseline. MobileNetV3-Small fine-tuned on RSCD-1million
+  test_50k subset (asphalt/concrete, dry/wet/water -> DRY/DAMP/WET), group-aware
+  split by minute-timestamp to prevent same-session leakage. STOPS at evaluated
+  checkpoint - no racing-domain adaptation in this experiment.
+
+data:
+  source_dataset: rezzzq/RSCD-1million (HF Hub), test_50k subset
+  raw_image_count: 5393
+  filtered_image_count: 3266
+  filter_criteria: "material in {asphalt, concrete} AND condition in {dry, wet, water}"
+  label_map: {dry: DRY, wet: DAMP, water: WET}
+  split_group_key: minute_group (YYYYMMDDHHMM prefix of filename timestamp)
+  split_ratio: {train: 0.80, val: 0.10, test: 0.10}   # applied via two-stage GroupShuffleSplit(test_size=0.2) then (test_size=0.5)
+  split_random_seed: 42
+  manifests:
+    - data/manifests/split_manifest_train.csv
+    - data/manifests/split_manifest_val.csv
+    - data/manifests/split_manifest_test.csv
+    - data/manifests/dataset_manifest.csv
+    - data/manifests/class_mapping.json
+
+model:
+  architecture: mobilenet_v3_small (torchvision)
+  pretrained: ImageNet1K_V1
+  input_size: 224x224
+  normalization: {mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225]}
+  num_classes: 3
+  classes_order: [DRY, DAMP, WET]
+  fine_tune_scope: "classifier head unfrozen; last 3 feature blocks (model.features[-3:]) unfrozen; earlier backbone frozen"
+
+training:
+  loss: CrossEntropyLoss with class weights = inverse frequency (train imbalance ratio 1.59x)
+  optimizer: AdamW
+  lr: 1e-3
+  lr_rationale: >
+    1e-3 chosen for AdamW fine-tuning a partially-frozen small CNN head+last blocks
+    on a small (2582-image) dataset - high enough for fast convergence within
+    the epoch budget, low enough with cosine annealing to avoid destroying
+    pretrained features in the unfrozen last blocks.
+  weight_decay: 1e-4
+  lr_schedule: CosineAnnealingLR, T_max=15
+  batch_size: 32
+  max_epochs: 15
+  early_stopping: {monitor: val_macro_f1, patience: 4}
+  mixed_precision: true (torch.autocast + GradScaler, CUDA)
+  seed: 42
+  device: cuda (NVIDIA GeForce RTX 5050 Laptop GPU, CUDA 12.8)
+
+augmentation:
+  train_only: true
+  applied_after_split: true
+  transforms:
+    - RandomHorizontalFlip: "road surface texture is left/right symmetric; safe"
+    - RandomRotation(10deg): "small camera-angle jitter tolerance; road surface still recognizable"
+    - ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15): >
+        kept mild (not the 0.2 used in an earlier draft) specifically to avoid
+        synthesizing specular highlights on dry pavement that could visually
+        mimic wet sheen, or washing out real wet reflections - preserves the
+        physical meaning of the wet/dry distinction per brief Section 16/17
+    - "NO blur augmentation": "blur would hide puddle reflections / wet sheen, the primary visual cue for WET vs DAMP vs DRY"
+    - Resize to 224x224 (both train and eval, no random crop - source images are already tight surface crops at 240x360)
+  eval_transforms: [Resize(224x224), ToTensor, Normalize]  # no augmentation on val/test
+
+evaluation:
+  test_set: data/manifests/split_manifest_test.csv (305 images, never used in training/tuning/model-selection)
+  metrics: [accuracy, macro_f1, per_class_precision_recall_f1, confusion_matrix]
+  calibration: [brier_score, expected_calibration_error_10bin, reliability_diagram]
+
+artifacts_dir: experiments/exp00_rscd_baseline/
+checkpoints_dir: experiments/exp00_rscd_baseline/checkpoints/

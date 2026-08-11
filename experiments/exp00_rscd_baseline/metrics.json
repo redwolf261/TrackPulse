@@ -1,0 +1,52 @@
+{
+  "test_accuracy": 0.7770491803278688,
+  "test_macro_f1": 0.7540313972839924,
+  "per_class": {
+    "DRY": {
+      "precision": 0.8794326241134752,
+      "recall": 0.8378378378378378,
+      "f1": 0.8581314878892734,
+      "support": 148
+    },
+    "DAMP": {
+      "precision": 0.6447368421052632,
+      "recall": 0.6125,
+      "f1": 0.6282051282051282,
+      "support": 80
+    },
+    "WET": {
+      "precision": 0.7272727272727273,
+      "recall": 0.8311688311688312,
+      "f1": 0.7757575757575758,
+      "support": 77
+    }
+  },
+  "confusion_matrix": [
+    [
+      124,
+      17,
+      7
+    ],
+    [
+      14,
+      49,
+      17
+    ],
+    [
+      3,
+      10,
+      64
+    ]
+  ],
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.8311688311688312,
+  "dry_precision": 0.8794326241134752,
+  "best_val_macro_f1": 0.7777468228266132,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "seed": 42
+}

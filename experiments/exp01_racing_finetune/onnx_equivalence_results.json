@@ -1,0 +1,18 @@
+{
+  "racing_eval_49": {
+    "n_images": 49,
+    "max_logit_diff": 1.7642974853515625e-05,
+    "mean_logit_diff": 6.4704491167652365e-06,
+    "max_prob_diff": 3.814697265625e-06,
+    "mean_prob_diff": 7.089656533861095e-07,
+    "prediction_mismatches": 0
+  },
+  "rscd_test_305": {
+    "n_images": 305,
+    "max_logit_diff": 8.344650268554688e-05,
+    "mean_logit_diff": 1.3711498897583759e-05,
+    "max_prob_diff": 1.4483928680419922e-05,
+    "mean_prob_diff": 1.1239500631183004e-06,
+    "prediction_mismatches": 0
+  }
+}

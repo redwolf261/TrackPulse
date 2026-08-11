@@ -1,0 +1,12 @@
+{
+  "classes": {
+    "DRY": 0,
+    "DAMP": 1,
+    "WET": 2
+  },
+  "source_condition_map": {
+    "dry": "DRY",
+    "wet": "DAMP",
+    "water": "WET"
+  }
+}

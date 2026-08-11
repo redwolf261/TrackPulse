@@ -1,0 +1,40 @@
+{
+  "n_audited": 3266,
+  "n_corrupt": 0,
+  "corrupt_files": [],
+  "n_distinct_resolutions": 1,
+  "top_resolutions": [
+    {
+      "w": 240,
+      "h": 360,
+      "count": 3266
+    }
+  ],
+  "aspect_ratio": {
+    "min": 0.6666666666666666,
+    "max": 0.6666666666666666,
+    "mean": 0.6666666666666665,
+    "std": 1.1102230246251565e-16
+  },
+  "filesize_bytes": {
+    "min": 2605,
+    "max": 40489,
+    "mean": 14284.854562155542,
+    "median": 13503.0
+  },
+  "brightness": {
+    "min": 41.291180555555556,
+    "max": 234.67471064814814,
+    "mean": 145.3950404844526,
+    "median": 139.1712326388889,
+    "n_near_black_lt20": 0,
+    "n_near_white_gt235": 0
+  },
+  "blur_laplacian_var": {
+    "min": 0.9497106372974538,
+    "max": 14074.033445125493,
+    "mean": 801.9556194606388,
+    "median": 304.96592683463814,
+    "n_below_heuristic_thresh_50": 633
+  }
+}

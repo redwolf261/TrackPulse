@@ -1,0 +1,692 @@
+[
+  {
+    "idx": 0,
+    "filename": "2011_Canadian_GP_-_Hamilton_retire.jpg",
+    "label": "WET",
+    "note": "visible wet track sheen, overcast Montreal 2011"
+  },
+  {
+    "idx": 1,
+    "filename": "2011_Canadian_GP_-_Start.jpg",
+    "label": "WET",
+    "note": "2011 Canadian GP start, wet track spray"
+  },
+  {
+    "idx": 2,
+    "filename": "2016_Formula_1_Chinese_Grand_Prix__26691567772_.jpg",
+    "label": "WET",
+    "note": "2016 Chinese GP, standing water visible"
+  },
+  {
+    "idx": 3,
+    "filename": "2018_11_GER_Qualy.png",
+    "label": "DAMP",
+    "note": "2018 German GP qualy - overcast, drying line visible track"
+  },
+  {
+    "idx": 4,
+    "filename": "2018_11_GER_Race.png",
+    "label": "DAMP",
+    "note": "2018 German GP race - damp track"
+  },
+  {
+    "idx": 5,
+    "filename": "2018_11_GER_Start.png",
+    "label": "DAMP",
+    "note": "2018 German GP start - damp track"
+  },
+  {
+    "idx": 6,
+    "filename": "2019_11_GER_Qualy.png",
+    "label": "WET",
+    "note": "2019 German GP qualy - heavy wet conditions (famous wet race)"
+  },
+  {
+    "idx": 7,
+    "filename": "2019_11_GER_Race.png",
+    "label": "WET",
+    "note": "2019 German GP race - wet/crash conditions"
+  },
+  {
+    "idx": 8,
+    "filename": "2019_11_GER_Start.png",
+    "label": "WET",
+    "note": "2019 German GP start - wet"
+  },
+  {
+    "idx": 9,
+    "filename": "2022_British_GP_-_Alpine_A522_of_Fernando_Alonso__5_.jpg",
+    "label": "WET",
+    "note": "2022 British GP wet - Alpine, visible spray/wet track"
+  },
+  {
+    "idx": 10,
+    "filename": "2022_British_GP_-_Alpine_A522_of_Fernando_Alonso__6_.jpg",
+    "label": "WET",
+    "note": "2022 British GP wet - Alpine"
+  },
+  {
+    "idx": 11,
+    "filename": "2022_British_GP_-_Haas_VF-22_of_Kevin_Magnussen__2_.jpg",
+    "label": "WET",
+    "note": "2022 British GP wet - Haas"
+  },
+  {
+    "idx": 13,
+    "filename": "2022_French_Grand_Prix__52277877307_.png",
+    "label": "DRY",
+    "note": "2022 French GP Paul Ricard dry track"
+  },
+  {
+    "idx": 14,
+    "filename": "2022_French_Grand_Prix__52277927652_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry"
+  },
+  {
+    "idx": 15,
+    "filename": "2022_French_Grand_Prix__52277973522_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry - Ferrari"
+  },
+  {
+    "idx": 17,
+    "filename": "2022_French_Grand_Prix__52278862858_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry - AlphaTauri"
+  },
+  {
+    "idx": 18,
+    "filename": "2022_French_Grand_Prix__52278893123_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry"
+  },
+  {
+    "idx": 19,
+    "filename": "2022_French_Grand_Prix__52278937381_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry"
+  },
+  {
+    "idx": 20,
+    "filename": "2022_French_Grand_Prix__52278958998_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry"
+  },
+  {
+    "idx": 21,
+    "filename": "2022_French_Grand_Prix__52278996336_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry - McLaren"
+  },
+  {
+    "idx": 24,
+    "filename": "2022_French_Grand_Prix__52279133179_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry - Ferrari"
+  },
+  {
+    "idx": 25,
+    "filename": "2022_French_Grand_Prix__52279171504_.png",
+    "label": "DRY",
+    "note": "2022 French GP dry - Ferrari"
+  },
+  {
+    "idx": 32,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__1_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP Barcelona dry"
+  },
+  {
+    "idx": 34,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__2_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry"
+  },
+  {
+    "idx": 36,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__3_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry"
+  },
+  {
+    "idx": 38,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__4_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry"
+  },
+  {
+    "idx": 39,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__5_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry"
+  },
+  {
+    "idx": 40,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__6_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry"
+  },
+  {
+    "idx": 42,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__8_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry"
+  },
+  {
+    "idx": 44,
+    "filename": "2022_Spanish_Grand_Prix__Leclerc__1_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry - Leclerc"
+  },
+  {
+    "idx": 46,
+    "filename": "2022_Spanish_Grand_Prix__Leclerc__3_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry - Leclerc"
+  },
+  {
+    "idx": 47,
+    "filename": "2022_Spanish_Grand_Prix__Ocon__1_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry - Ocon"
+  },
+  {
+    "idx": 48,
+    "filename": "2022_Spanish_Grand_Prix__Ocon__2_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry - Ocon"
+  },
+  {
+    "idx": 50,
+    "filename": "2022_Spanish_Grand_Prix__Ocon__4_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry - Ocon"
+  },
+  {
+    "idx": 52,
+    "filename": "2024_British_Grand_Prix__Bottas__1_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Bottas"
+  },
+  {
+    "idx": 53,
+    "filename": "2024_British_Grand_Prix__Gasly__1_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Gasly"
+  },
+  {
+    "idx": 54,
+    "filename": "2024_British_Grand_Prix__Hamilton__2_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Hamilton"
+  },
+  {
+    "idx": 55,
+    "filename": "2024_British_Grand_Prix__Ocon__1_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Ocon"
+  },
+  {
+    "idx": 56,
+    "filename": "2024_British_Grand_Prix__Piastri__1_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Piastri"
+  },
+  {
+    "idx": 57,
+    "filename": "2024_British_Grand_Prix__Russell__3_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Russell"
+  },
+  {
+    "idx": 58,
+    "filename": "2024_British_Grand_Prix__Russell__4_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Russell"
+  },
+  {
+    "idx": 59,
+    "filename": "2024_British_Grand_Prix__Sainz__1_.jpg",
+    "label": "DRY",
+    "note": "2024 British GP dry - Sainz"
+  },
+  {
+    "idx": 60,
+    "filename": "2024_British_Grand_Prix__Verstappen__2_.jpg",
+    "label": "DAMP",
+    "note": "2024 British GP - Verstappen, track looks damp/overcast"
+  },
+  {
+    "idx": 62,
+    "filename": "2024_British_Grand_Prix__safety_car.jpg",
+    "label": "WET",
+    "note": "2024 British GP safety car, visibly wet track"
+  },
+  {
+    "idx": 63,
+    "filename": "Alain_Prost_-_Williams_FW15C_during_practice_for_the_1993_British_Grand_Prix__32873611163_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Prost - heavy wet track, standing water"
+  },
+  {
+    "idx": 65,
+    "filename": "Alessandro_Zanardi_-_Lotus_107B_heads_for_Copse_during_practice_for_the_1993_British_Grand_Prix__32873595913_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Zanardi - wet"
+  },
+  {
+    "idx": 68,
+    "filename": "Andrea_de_Cesaris_-_Tyrrell_021_during_practice_for_the_1993_British_Grand_Prix__33302878150_.jpg",
+    "label": "WET",
+    "note": "1993 British GP de Cesaris - wet"
+  },
+  {
+    "idx": 70,
+    "filename": "Ayrton_Senna_-_Mclaren_MP4-8_during_practice_for_the_1993_British_Grand_Prix__33686772245_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Senna - wet, spray"
+  },
+  {
+    "idx": 73,
+    "filename": "Charles_Leclerc_aux_essais_libre___Hockenheim.jpg",
+    "label": "WET",
+    "note": "Leclerc Hockenheim wet testing"
+  },
+  {
+    "idx": 74,
+    "filename": "Coloni_FC188B_2008_Donington_Park.jpg",
+    "label": "WET",
+    "note": "2008 Donington Coloni - wet"
+  },
+  {
+    "idx": 75,
+    "filename": "Damon_Hill_-_Williams_FW15C_during_practice_for_the_1993_British_Grand_Prix__33686734825_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Hill - wet"
+  },
+  {
+    "idx": 76,
+    "filename": "Esteban_Ocon_-_Mercedes__33069901616_.jpg",
+    "label": "WET",
+    "note": "Ocon Mercedes wet spray closeup"
+  },
+  {
+    "idx": 81,
+    "filename": "FIA_F1_Austria_2022_Nr._11_Perez__side_.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Perez"
+  },
+  {
+    "idx": 82,
+    "filename": "FIA_F1_Austria_2022_Nr._16_Leclerc__side_2_.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Leclerc"
+  },
+  {
+    "idx": 83,
+    "filename": "FIA_F1_Austria_2022_Nr._18_Stroll.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Stroll"
+  },
+  {
+    "idx": 84,
+    "filename": "FIA_F1_Austria_2022_Nr._1_Verstappen.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Verstappen"
+  },
+  {
+    "idx": 85,
+    "filename": "FIA_F1_Austria_2022_Nr._22_Tsunoda__side_2_.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Tsunoda"
+  },
+  {
+    "idx": 86,
+    "filename": "FIA_F1_Austria_2022_Nr._23_Albon.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Albon"
+  },
+  {
+    "idx": 87,
+    "filename": "FIA_F1_Austria_2022_Nr._31_Ocon__side_.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Ocon"
+  },
+  {
+    "idx": 90,
+    "filename": "FIA_F1_Austria_2022_Nr._47_Schumacher.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Schumacher"
+  },
+  {
+    "idx": 91,
+    "filename": "FIA_F1_Austria_2022_Nr._55_Sainz__side_2_.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Sainz"
+  },
+  {
+    "idx": 92,
+    "filename": "FIA_F1_Austria_2022_Nr._5_Vettel.jpg",
+    "label": "DRY",
+    "note": "2022 Austria dry - Vettel"
+  },
+  {
+    "idx": 116,
+    "filename": "Fernando_Alonso_-_McLaren__32952236382_.jpg",
+    "label": "WET",
+    "note": "Alonso McLaren wet"
+  },
+  {
+    "idx": 117,
+    "filename": "Fernando_Alonso__4948402169_.jpg",
+    "label": "WET",
+    "note": "Alonso wet spray"
+  },
+  {
+    "idx": 118,
+    "filename": "Ferrari_McLaren_BMW_China_2006.jpg",
+    "label": "WET",
+    "note": "2006 China wet"
+  },
+  {
+    "idx": 119,
+    "filename": "Force_India_Cor_e_2010.jpg",
+    "label": "WET",
+    "note": "Force India 2010 wet"
+  },
+  {
+    "idx": 120,
+    "filename": "Gerhard_Berger_-_Ferrari_F193A_spins_during_practice_for_the_1993_British_Grand_Prix__33530346222_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Berger spin - wet"
+  },
+  {
+    "idx": 121,
+    "filename": "H_lkenberg_2024_BelgiumGP.jpg",
+    "label": "WET",
+    "note": "2024 Belgium Hulkenberg wet"
+  },
+  {
+    "idx": 122,
+    "filename": "Hamilton_-_2016_Monaco_GP_01.jpg",
+    "label": "WET",
+    "note": "2016 Monaco GP Hamilton wet"
+  },
+  {
+    "idx": 123,
+    "filename": "JJ_Lehto_-_Sauber_C12_heads_for_Copse_during_practice_for_the_1993_British_Grand_Prix__33686700885_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Lehto - wet"
+  },
+  {
+    "idx": 124,
+    "filename": "Jaime_Alguersuari_2010_Japan_3rd_Free_Practice.jpg",
+    "label": "WET",
+    "note": "2010 Japan Alguersuari wet"
+  },
+  {
+    "idx": 125,
+    "filename": "Japan_2007_GP_Fuji_2.jpg",
+    "label": "DAMP",
+    "note": "2007 Fuji GP overcast/damp track wide shot"
+  },
+  {
+    "idx": 126,
+    "filename": "Japan_2007_GP_Fuji_3.jpg",
+    "label": "DAMP",
+    "note": "2007 Fuji GP damp track wide shot"
+  },
+  {
+    "idx": 127,
+    "filename": "Jean_Alesi_-_Ferrari_F193_during_practice_for_the_1993_British_Grand_Prix__33686706485_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Alesi - wet"
+  },
+  {
+    "idx": 128,
+    "filename": "Kamui_Kobayashi__4948409195_.jpg",
+    "label": "WET",
+    "note": "Kobayashi wet spray"
+  },
+  {
+    "idx": 129,
+    "filename": "Kazuki_Nakajima_2007_Brazil_free_practice.jpg",
+    "label": "DAMP",
+    "note": "2007 Brazil Nakajima practice - track looks damp not heavy wet"
+  },
+  {
+    "idx": 130,
+    "filename": "Kovalainen_Malaysian_qualy_2010.jpg",
+    "label": "WET",
+    "note": "2010 Malaysia Kovalainen wet"
+  },
+  {
+    "idx": 131,
+    "filename": "Kovalainen___Heidfeld_2008_Britain.jpg",
+    "label": "WET",
+    "note": "2008 Britain Kovalainen/Heidfeld wet"
+  },
+  {
+    "idx": 132,
+    "filename": "Kubica_China_09.jpg",
+    "label": "WET",
+    "note": "Kubica China wet"
+  },
+  {
+    "idx": 133,
+    "filename": "Lewis_Hamilton_leads_2012_Malaysian_GP.jpg",
+    "label": "WET",
+    "note": "2012 Malaysia Hamilton leads, wet"
+  },
+  {
+    "idx": 134,
+    "filename": "Marussia__No.4_Max_Chilton__3___15736471351_.jpg",
+    "label": "WET",
+    "note": "Marussia Chilton wet, red glow brake but track wet"
+  },
+  {
+    "idx": 135,
+    "filename": "Massa_Monza_2008.jpg",
+    "label": "DRY",
+    "note": "Massa Monza 2008 dry track"
+  },
+  {
+    "idx": 136,
+    "filename": "McLaren_Honda_No.22_Jenson_Button__21806295070_.jpg",
+    "label": "DRY",
+    "note": "Button McLaren Honda dry track"
+  },
+  {
+    "idx": 137,
+    "filename": "Mercedes_AMG_No.6_Nico_Rosberg__21920246400_.jpg",
+    "label": "WET",
+    "note": "Rosberg Mercedes wet kerb spray"
+  },
+  {
+    "idx": 138,
+    "filename": "Miami_Grand_Prix_startfinish.jpg",
+    "label": "DRY",
+    "note": "Miami GP start/finish grid, dry sunny track"
+  },
+  {
+    "idx": 139,
+    "filename": "Michael_Andretti_-_Mclaren_MP4-8_heads_for_Copse_during_practice_for_the_1993_British_Grand_Prix__33557350241_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Andretti - wet"
+  },
+  {
+    "idx": 140,
+    "filename": "Michael_Schumacher__4949014770_.jpg",
+    "label": "WET",
+    "note": "Schumacher wet"
+  },
+  {
+    "idx": 141,
+    "filename": "Michele_Alboreto_-_Lola_T93-30_during_practice_for_the_1993_British_Grand_Prix__33557339751_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Alboreto - wet"
+  },
+  {
+    "idx": 143,
+    "filename": "Nico_Rosberg_2014_China_Qualify.jpg",
+    "label": "WET",
+    "note": "2014 China Rosberg qualy wet"
+  },
+  {
+    "idx": 144,
+    "filename": "Pedro_De_La_Rosa__4948992816_.jpg",
+    "label": "WET",
+    "note": "De La Rosa wet"
+  },
+  {
+    "idx": 145,
+    "filename": "Peloton_China_09.jpg",
+    "label": "WET",
+    "note": "China peloton wet"
+  },
+  {
+    "idx": 146,
+    "filename": "Pierluigi_Martini_-_Minardi_M193_during_practice_for_the_1993_British_Grand_Prix__33645875476_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Martini - wet"
+  },
+  {
+    "idx": 148,
+    "filename": "RAM_03_2008_Donington_Park.jpg",
+    "label": "WET",
+    "note": "2008 Donington RAM wet"
+  },
+  {
+    "idx": 149,
+    "filename": "Raidillon_Renault__4948371983_.jpg",
+    "label": "WET",
+    "note": "Raidillon Renault wet spray"
+  },
+  {
+    "idx": 150,
+    "filename": "RedBull_Williams_China_2006.jpg",
+    "label": "WET",
+    "note": "2006 China RedBull/Williams wet"
+  },
+  {
+    "idx": 151,
+    "filename": "Red_Bull_3_China_09.jpg",
+    "label": "WET",
+    "note": "2009 China Red Bull wet"
+  },
+  {
+    "idx": 152,
+    "filename": "Renault_2_China_09.jpg",
+    "label": "WET",
+    "note": "2009 China Renault wet"
+  },
+  {
+    "idx": 153,
+    "filename": "Renault_China_2006.jpg",
+    "label": "WET",
+    "note": "2006 China Renault wet"
+  },
+  {
+    "idx": 154,
+    "filename": "Rio_Haryanto_-_Manor__32261820424_.jpg",
+    "label": "WET",
+    "note": "Haryanto Manor wet spray"
+  },
+  {
+    "idx": 155,
+    "filename": "Robert_Kubica__4949008308_.jpg",
+    "label": "WET",
+    "note": "Kubica wet"
+  },
+  {
+    "idx": 156,
+    "filename": "Rossi_US_GP_2015.jpg",
+    "label": "WET",
+    "note": "Rossi US GP 2015 wet, standing water/reflection confirmed"
+  },
+  {
+    "idx": 157,
+    "filename": "Safety_Car_with_Lewis_Hamilton_2012_Malaysia.jpg",
+    "label": "WET",
+    "note": "2012 Malaysia safety car w/ Hamilton, wet"
+  },
+  {
+    "idx": 158,
+    "filename": "Sebastien_Buemi_2009_Japan_2nd_Free_Practice.jpg",
+    "label": "WET",
+    "note": "2009 Japan Buemi wet"
+  },
+  {
+    "idx": 160,
+    "filename": "Starting_grid_on_2021_Russian_Grand_Prix_01.jpg",
+    "label": "DAMP",
+    "note": "2021 Russian GP grid - overcast/damp"
+  },
+  {
+    "idx": 161,
+    "filename": "Starting_grid_on_2021_Russian_Grand_Prix_02.jpg",
+    "label": "DAMP",
+    "note": "2021 Russian GP grid - overcast/damp"
+  },
+  {
+    "idx": 162,
+    "filename": "Starting_grid_on_2021_Russian_Grand_Prix_03.jpg",
+    "label": "DAMP",
+    "note": "2021 Russian GP grid - overcast/damp"
+  },
+  {
+    "idx": 163,
+    "filename": "Starting_grid_on_2021_Russian_Grand_Prix_04.jpg",
+    "label": "DAMP",
+    "note": "2021 Russian GP grid - overcast/damp"
+  },
+  {
+    "idx": 164,
+    "filename": "Starting_grid_on_2021_Russian_Grand_Prix_05.jpg",
+    "label": "DAMP",
+    "note": "2021 Russian GP grid - overcast/damp"
+  },
+  {
+    "idx": 165,
+    "filename": "Thierry_Boutsen_-_Jordan_193_during_practice_for_the_1993_British_Grand_Prix__32843912224_.jpg",
+    "label": "WET",
+    "note": "1993 British GP Boutsen - wet"
+  },
+  {
+    "idx": 167,
+    "filename": "Toro_Rosso_Renault_China_09.jpg",
+    "label": "WET",
+    "note": "2009 China Toro Rosso wet"
+  },
+  {
+    "idx": 169,
+    "filename": "Toyota_China_09.jpg",
+    "label": "WET",
+    "note": "2009 China Toyota wet, heavy spray"
+  },
+  {
+    "idx": 170,
+    "filename": "Wet_Spa_2008.jpg",
+    "label": "WET",
+    "note": "Wet Spa 2008 - visible wet sheen/spray confirmed"
+  },
+  {
+    "idx": 171,
+    "filename": "Yuki_Tsunoda_in_qualifying_for_the_2022_British_Grand_Prix.jpg",
+    "label": "WET",
+    "note": "2022 British GP Tsunoda qualifying wet"
+  },
+  {
+    "idx": 33,
+    "filename": "2022_Spanish_Grand_Prix__Alonso__1___cropped_.jpg",
+    "label": "DRY",
+    "note": "2022 Spanish GP dry (dup crop, keep one)"
+  },
+  {
+    "idx": 72,
+    "filename": "Chandhok_Malaysian_Qualy_2010__cropped_.jpg",
+    "label": "WET",
+    "note": "2010 Malaysia qualy - wet, spray"
+  }
+]

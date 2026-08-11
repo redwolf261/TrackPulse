@@ -1,0 +1,19 @@
+{
+  "n_filtered": 3266,
+  "n_timestamp_parseable": 3266,
+  "date_range": [
+    "2022-01-25 23:41:46",
+    "2022-07-28 21:17:38"
+  ],
+  "gap_stats_seconds": {
+    "median": 5.0,
+    "min": 0.0,
+    "max": 1465002.0,
+    "n_le_5s": 1640,
+    "n_le_60s": 2249
+  },
+  "n_minute_groups": 1272,
+  "n_multi_image_minute_groups": 318,
+  "max_images_per_minute_group": 69,
+  "n_mixed_label_minute_groups": 75
+}

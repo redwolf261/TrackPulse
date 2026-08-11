@@ -1,0 +1,675 @@
+{
+  "metrics": {
+    "n_total": 49,
+    "n_ambiguous_excluded": 5,
+    "n_quantitative": 44,
+    "accuracy": 0.5,
+    "macro_f1": 0.34259259259259256,
+    "per_class": {
+      "DRY": {
+        "precision": 0.9,
+        "recall": 0.3,
+        "f1": 0.45,
+        "support": 30
+      },
+      "DAMP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "WET": {
+        "precision": 0.41935483870967744,
+        "recall": 0.9285714285714286,
+        "f1": 0.5777777777777777,
+        "support": 14
+      }
+    },
+    "confusion_matrix": [
+      [
+        9,
+        3,
+        18
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        13
+      ]
+    ],
+    "classes_order": [
+      "DRY",
+      "DAMP",
+      "WET"
+    ],
+    "wet_recall": 0.9285714285714286,
+    "dry_recall": 0.3,
+    "dry_precision": 0.9,
+    "false_wet_rate": 0.6,
+    "false_dry_rate": 0.07142857142857142,
+    "mean_confidence_correct": 0.9331156719814647,
+    "mean_confidence_incorrect": 0.8186285373839465,
+    "ambiguous_predictions": [
+      {
+        "image_id": "contrast_00.jpg",
+        "predicted_class": "WET",
+        "confidence": 0.9820294976234436
+      },
+      {
+        "image_id": "contrast_08.jpg",
+        "predicted_class": "WET",
+        "confidence": 0.7900987267494202
+      },
+      {
+        "image_id": "contrast_09.JPG",
+        "predicted_class": "WET",
+        "confidence": 0.578815758228302
+      },
+      {
+        "image_id": "contrast_11.jpg",
+        "predicted_class": "WET",
+        "confidence": 0.9823637008666992
+      },
+      {
+        "image_id": "contrast_34.jpg",
+        "predicted_class": "WET",
+        "confidence": 0.7884899973869324
+      }
+    ]
+  },
+  "all_predictions": [
+    {
+      "image_id": "racing_00.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9937173128128052,
+      "probs": {
+        "DRY": 0.001341755036264658,
+        "DAMP": 0.004940893966704607,
+        "WET": 0.9937173128128052
+      },
+      "source_event": "16 Maldonado Wet (2013 Malaysia)"
+    },
+    {
+      "image_id": "racing_01.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9329235553741455,
+      "probs": {
+        "DRY": 0.05329269543290138,
+        "DAMP": 0.013783772476017475,
+        "WET": 0.9329235553741455
+      },
+      "source_event": "2011 Canadian GP - Force India"
+    },
+    {
+      "image_id": "racing_02.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9975282549858093,
+      "probs": {
+        "DRY": 0.00026515472563914955,
+        "DAMP": 0.002206522738561034,
+        "WET": 0.9975282549858093
+      },
+      "source_event": "2011 Canadian GP - Race stop"
+    },
+    {
+      "image_id": "racing_03.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.8607265949249268,
+      "probs": {
+        "DRY": 0.13889364898204803,
+        "DAMP": 0.00037979354965500534,
+        "WET": 0.8607265949249268
+      },
+      "source_event": "2011 Canadian GP - Water"
+    },
+    {
+      "image_id": "racing_04.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.7673164010047913,
+      "probs": {
+        "DRY": 0.2326807677745819,
+        "DAMP": 2.816290134433075e-06,
+        "WET": 0.7673164010047913
+      },
+      "source_event": "2012 British GP - Kovalainen"
+    },
+    {
+      "image_id": "racing_05.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "DRY",
+      "confidence": 0.6887897849082947,
+      "probs": {
+        "DRY": 0.6887897849082947,
+        "DAMP": 1.448959665140137e-05,
+        "WET": 0.3111957609653473
+      },
+      "source_event": "2012 British GP - Lotus"
+    },
+    {
+      "image_id": "racing_06.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9994044303894043,
+      "probs": {
+        "DRY": 0.000535794475581497,
+        "DAMP": 5.976087413728237e-05,
+        "WET": 0.9994044303894043
+      },
+      "source_event": "2012 British GP - Massa"
+    },
+    {
+      "image_id": "racing_07.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.98514324426651,
+      "probs": {
+        "DRY": 0.01240045577287674,
+        "DAMP": 0.002456358168274164,
+        "WET": 0.98514324426651
+      },
+      "source_event": "Adrian Sutil 2010 Malaysia 3rd Qualify"
+    },
+    {
+      "image_id": "racing_08.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9973167777061462,
+      "probs": {
+        "DRY": 0.0026624207384884357,
+        "DAMP": 2.0767365640494972e-05,
+        "WET": 0.9973167777061462
+      },
+      "source_event": "Alguersuari Malaysian Qualy 2010"
+    },
+    {
+      "image_id": "racing_09.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9998992681503296,
+      "probs": {
+        "DRY": 5.1049497415078804e-05,
+        "DAMP": 4.975824413122609e-05,
+        "WET": 0.9998992681503296
+      },
+      "source_event": "Safety Car in Heavy Rain (Mercedes AMG GT S)"
+    },
+    {
+      "image_id": "racing_10.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9580026268959045,
+      "probs": {
+        "DRY": 0.02728472650051117,
+        "DAMP": 0.014712625183165073,
+        "WET": 0.9580026268959045
+      },
+      "source_event": "Eau Rouge McLaren (2011 Belgium, rain/fog)"
+    },
+    {
+      "image_id": "racing_11.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9990179538726807,
+      "probs": {
+        "DRY": 0.00035784533247351646,
+        "DAMP": 0.0006242081872187555,
+        "WET": 0.9990179538726807
+      },
+      "source_event": "Felipe Massa (wet spray)"
+    },
+    {
+      "image_id": "racing_12.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.9999797344207764,
+      "probs": {
+        "DRY": 5.960025191598106e-06,
+        "DAMP": 1.4353000551636796e-05,
+        "WET": 0.9999797344207764
+      },
+      "source_event": "Fernando Alonso Belgium GP 2010"
+    },
+    {
+      "image_id": "contrast_00.jpg",
+      "ground_truth": "AMBIGUOUS",
+      "predicted_class": "WET",
+      "confidence": 0.9820294976234436,
+      "probs": {
+        "DRY": 0.013953952118754387,
+        "DAMP": 0.004016555845737457,
+        "WET": 0.9820294976234436
+      },
+      "source_event": "2015 Singapore GP pit lane (Ferrari)"
+    },
+    {
+      "image_id": "contrast_01.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9871466159820557,
+      "probs": {
+        "DRY": 0.011027270928025246,
+        "DAMP": 0.0018261584918946028,
+        "WET": 0.9871466159820557
+      },
+      "source_event": "2019 Turkey/China pit lane (Massa/Ferrari/Hamilton boxes)"
+    },
+    {
+      "image_id": "contrast_02.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.48024311661720276,
+      "probs": {
+        "DRY": 0.3664635121822357,
+        "DAMP": 0.1532934159040451,
+        "WET": 0.48024311661720276
+      },
+      "source_event": "Catalunya test 2011 - Lotus pitstop (overhead)"
+    },
+    {
+      "image_id": "contrast_03.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.6881142854690552,
+      "probs": {
+        "DRY": 0.3069055676460266,
+        "DAMP": 0.004980095662176609,
+        "WET": 0.6881142854690552
+      },
+      "source_event": "2012 Italian GP Monza pit lane"
+    },
+    {
+      "image_id": "contrast_04.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.7094177007675171,
+      "probs": {
+        "DRY": 0.7094177007675171,
+        "DAMP": 0.0034232675097882748,
+        "WET": 0.2871590852737427
+      },
+      "source_event": "2012 Italian GP Ferrari pit"
+    },
+    {
+      "image_id": "contrast_05.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.644324004650116,
+      "probs": {
+        "DRY": 0.3528973460197449,
+        "DAMP": 0.002778619294986129,
+        "WET": 0.644324004650116
+      },
+      "source_event": "2012 Italian GP Massa pit"
+    },
+    {
+      "image_id": "contrast_06.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9894027709960938,
+      "probs": {
+        "DRY": 0.00526844710111618,
+        "DAMP": 0.00532875070348382,
+        "WET": 0.9894027709960938
+      },
+      "source_event": "Alonso Renault Pitstop Chinese GP 2008"
+    },
+    {
+      "image_id": "contrast_07.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.7589147686958313,
+      "probs": {
+        "DRY": 0.7589147686958313,
+        "DAMP": 0.21646635234355927,
+        "WET": 0.024618856608867645
+      },
+      "source_event": "Aston Martin pit USGP 2021"
+    },
+    {
+      "image_id": "contrast_08.jpg",
+      "ground_truth": "AMBIGUOUS",
+      "predicted_class": "WET",
+      "confidence": 0.7900987267494202,
+      "probs": {
+        "DRY": 0.17890068888664246,
+        "DAMP": 0.031000550836324692,
+        "WET": 0.7900987267494202
+      },
+      "source_event": "F1 2011 AUS pit (Red Bull/Toro Rosso)"
+    },
+    {
+      "image_id": "contrast_09.JPG",
+      "ground_truth": "AMBIGUOUS",
+      "predicted_class": "WET",
+      "confidence": 0.578815758228302,
+      "probs": {
+        "DRY": 0.2209552377462387,
+        "DAMP": 0.2002290040254593,
+        "WET": 0.578815758228302
+      },
+      "source_event": "F1 Turkey GP 2021 garage (Red Bull livery reveal)"
+    },
+    {
+      "image_id": "contrast_10.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9999438524246216,
+      "probs": {
+        "DRY": 4.343886757851578e-05,
+        "DAMP": 1.2814203728339635e-05,
+        "WET": 0.9999438524246216
+      },
+      "source_event": "Fale F1 Monza 2004 Sauber pit"
+    },
+    {
+      "image_id": "contrast_11.jpg",
+      "ground_truth": "AMBIGUOUS",
+      "predicted_class": "WET",
+      "confidence": 0.9823637008666992,
+      "probs": {
+        "DRY": 0.012531767599284649,
+        "DAMP": 0.005104626528918743,
+        "WET": 0.9823637008666992
+      },
+      "source_event": "F1 fan pitstop challenge activation (not a real track)"
+    },
+    {
+      "image_id": "contrast_12.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DAMP",
+      "confidence": 0.7167704701423645,
+      "probs": {
+        "DRY": 0.0246925950050354,
+        "DAMP": 0.7167704701423645,
+        "WET": 0.2585369348526001
+      },
+      "source_event": "2008 British GP Silverstone pit lane wide"
+    },
+    {
+      "image_id": "contrast_13.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DAMP",
+      "confidence": 0.511961042881012,
+      "probs": {
+        "DRY": 0.3448770046234131,
+        "DAMP": 0.511961042881012,
+        "WET": 0.14316196739673615
+      },
+      "source_event": "2008 British GP Renault pitstop"
+    },
+    {
+      "image_id": "contrast_14.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.5601152777671814,
+      "probs": {
+        "DRY": 0.4114229083061218,
+        "DAMP": 0.028461795300245285,
+        "WET": 0.5601152777671814
+      },
+      "source_event": "2008 British GP Williams pitstop"
+    },
+    {
+      "image_id": "contrast_15.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9214949607849121,
+      "probs": {
+        "DRY": 0.05737187713384628,
+        "DAMP": 0.02113320678472519,
+        "WET": 0.9214949607849121
+      },
+      "source_event": "2008 British GP Force India on track"
+    },
+    {
+      "image_id": "contrast_16.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9998981952667236,
+      "probs": {
+        "DRY": 2.7915144528378733e-05,
+        "DAMP": 7.393769192276523e-05,
+        "WET": 0.9998981952667236
+      },
+      "source_event": "2008 British GP BMW/Renault side by side"
+    },
+    {
+      "image_id": "contrast_17.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9741169214248657,
+      "probs": {
+        "DRY": 0.014032360166311264,
+        "DAMP": 0.011850643903017044,
+        "WET": 0.9741169214248657
+      },
+      "source_event": "2008 British GP through-fence view"
+    },
+    {
+      "image_id": "contrast_18.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.973071813583374,
+      "probs": {
+        "DRY": 0.02368965931236744,
+        "DAMP": 0.0032384891528636217,
+        "WET": 0.973071813583374
+      },
+      "source_event": "2008 British GP crashed Ferrari on flatbed"
+    },
+    {
+      "image_id": "contrast_19.jpg",
+      "ground_truth": "WET",
+      "predicted_class": "WET",
+      "confidence": 0.728150486946106,
+      "probs": {
+        "DRY": 0.271709680557251,
+        "DAMP": 0.00013983881217427552,
+        "WET": 0.728150486946106
+      },
+      "source_event": "2008 British GP McLaren wet running"
+    },
+    {
+      "image_id": "contrast_20.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.8606009483337402,
+      "probs": {
+        "DRY": 0.08753985166549683,
+        "DAMP": 0.05185911804437637,
+        "WET": 0.8606009483337402
+      },
+      "source_event": "2008 British GP McLaren dry running"
+    },
+    {
+      "image_id": "contrast_21.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9708898663520813,
+      "probs": {
+        "DRY": 0.016771351918578148,
+        "DAMP": 0.01233874261379242,
+        "WET": 0.9708898663520813
+      },
+      "source_event": "2008 British GP Toyota on track"
+    },
+    {
+      "image_id": "contrast_22.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.9843772649765015,
+      "probs": {
+        "DRY": 0.9843772649765015,
+        "DAMP": 0.0003704940027091652,
+        "WET": 0.015252258628606796
+      },
+      "source_event": "2016 Bahrain GP start (night)"
+    },
+    {
+      "image_id": "contrast_23.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.9825959205627441,
+      "probs": {
+        "DRY": 0.9825959205627441,
+        "DAMP": 0.0019384806510061026,
+        "WET": 0.015465600416064262
+      },
+      "source_event": "2016 Bahrain GP Williams testing (day)"
+    },
+    {
+      "image_id": "contrast_24.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.6697104573249817,
+      "probs": {
+        "DRY": 0.2384849637746811,
+        "DAMP": 0.0918046310544014,
+        "WET": 0.6697104573249817
+      },
+      "source_event": "2016 Bahrain GP McLaren-Honda (night)"
+    },
+    {
+      "image_id": "contrast_25.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.6561578512191772,
+      "probs": {
+        "DRY": 0.22107990086078644,
+        "DAMP": 0.12276224792003632,
+        "WET": 0.6561578512191772
+      },
+      "source_event": "2016 Bahrain GP Haas (day)"
+    },
+    {
+      "image_id": "contrast_26.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9996070265769958,
+      "probs": {
+        "DRY": 0.0003286947321612388,
+        "DAMP": 6.435361865442246e-05,
+        "WET": 0.9996070265769958
+      },
+      "source_event": "2016 Bahrain GP Haas lockup (night, tire smoke)"
+    },
+    {
+      "image_id": "contrast_27.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9406663775444031,
+      "probs": {
+        "DRY": 0.0593014620244503,
+        "DAMP": 3.214036041754298e-05,
+        "WET": 0.9406663775444031
+      },
+      "source_event": "2016 Bahrain GP Mercedes lockup (night, tire smoke)"
+    },
+    {
+      "image_id": "contrast_28.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "WET",
+      "confidence": 0.9950175881385803,
+      "probs": {
+        "DRY": 0.0036989219952374697,
+        "DAMP": 0.0012835771776735783,
+        "WET": 0.9950175881385803
+      },
+      "source_event": "2015 Singapore GP Mercedes (night)"
+    },
+    {
+      "image_id": "contrast_29.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.9717071652412415,
+      "probs": {
+        "DRY": 0.9717071652412415,
+        "DAMP": 0.018346447497606277,
+        "WET": 0.009946427308022976
+      },
+      "source_event": "2016 Bahrain GP Red Bull (day)"
+    },
+    {
+      "image_id": "contrast_30.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.955314576625824,
+      "probs": {
+        "DRY": 0.955314576625824,
+        "DAMP": 0.0006995688891038299,
+        "WET": 0.0439857617020607
+      },
+      "source_event": "2015 Singapore GP Lotus lockup w/ sparks (night)"
+    },
+    {
+      "image_id": "contrast_31.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.9911056160926819,
+      "probs": {
+        "DRY": 0.9911056160926819,
+        "DAMP": 0.0003167073300573975,
+        "WET": 0.008577638305723667
+      },
+      "source_event": "2016 Bahrain GP Williams (day)"
+    },
+    {
+      "image_id": "contrast_32.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.9618103504180908,
+      "probs": {
+        "DRY": 0.9618103504180908,
+        "DAMP": 0.0009558642632327974,
+        "WET": 0.03723377734422684
+      },
+      "source_event": "2016 Bahrain GP Renault (day)"
+    },
+    {
+      "image_id": "contrast_33.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DRY",
+      "confidence": 0.9941747784614563,
+      "probs": {
+        "DRY": 0.9941747784614563,
+        "DAMP": 2.2022833945811726e-05,
+        "WET": 0.005803234875202179
+      },
+      "source_event": "2015 Singapore GP Red Bull (night)"
+    },
+    {
+      "image_id": "contrast_34.jpg",
+      "ground_truth": "AMBIGUOUS",
+      "predicted_class": "WET",
+      "confidence": 0.7884899973869324,
+      "probs": {
+        "DRY": 0.001351179787889123,
+        "DAMP": 0.21015876531600952,
+        "WET": 0.7884899973869324
+      },
+      "source_event": "2015 Singapore GP Rossi crash recovery (night)"
+    },
+    {
+      "image_id": "contrast_35.jpg",
+      "ground_truth": "DRY",
+      "predicted_class": "DAMP",
+      "confidence": 0.7817845940589905,
+      "probs": {
+        "DRY": 0.002474143635481596,
+        "DAMP": 0.7817845940589905,
+        "WET": 0.2157413214445114
+      },
+      "source_event": "2015 Singapore GP Ferrari wide overhead (night)"
+    }
+  ]
+}

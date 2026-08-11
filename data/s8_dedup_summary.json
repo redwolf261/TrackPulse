@@ -1,0 +1,15 @@
+{
+  "n_filtered_images": 3266,
+  "exact_dup_groups": 0,
+  "exact_dup_extra_files": 0,
+  "exact_dup_filenames_to_drop": [],
+  "n_minute_groups": 1272,
+  "n_multi_image_minute_groups": 318,
+  "pairwise_comparisons_done": 20623,
+  "near_dup_hamming_threshold": 5,
+  "near_dup_pairs_found": 0,
+  "near_dup_pairs_with_label_mismatch": 0,
+  "near_dup_clusters": 0,
+  "near_dup_cluster_size_distribution": {},
+  "near_dup_pairs_sample": []
+}
