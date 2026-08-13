@@ -206,6 +206,7 @@ export default function App() {
                 if (file) handleFile(file);
               }}
             />
+            {loading && <span className="spinner" aria-hidden="true" />}
             {loading
               ? loadingMessage ?? "Analyzing…"
               : "Drop a track photo or short video here, or click to upload"}

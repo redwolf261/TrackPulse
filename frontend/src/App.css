@@ -79,12 +79,28 @@ header.app-header h1 {
   padding: 32px;
   text-align: center;
   cursor: pointer;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, background-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .dropzone:hover, .dropzone.active {
   border-color: var(--wet);
+  background: rgba(37, 99, 235, 0.06);
 }
 .dropzone input { display: none; }
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--wet);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .preview-img {
   width: 100%;
@@ -99,6 +115,11 @@ header.app-header h1 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
+  animation: reveal 0.25s ease-out;
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .condition-label.DRY { color: var(--dry); }
 .condition-label.DAMP { color: var(--damp); }
