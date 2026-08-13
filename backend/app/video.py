@@ -46,6 +46,23 @@ def extract_frames(video_bytes: bytes, suffix: str = ".mp4") -> list[bytes]:
         frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0
         duration_s = (frame_count / fps) if fps > 0 else 0
 
+        # OpenCV happily opens a single still image as a "video" — its container/
+        # codec probing doesn't distinguish "is this actually a video" from "can
+        # I decode at least one frame". CAP_PROP_FRAME_COUNT for these cases is
+        # either exactly 1 or an invalid sentinel (observed: a large negative
+        # int64, i.e. -2**63, when metadata genuinely can't be determined) — a
+        # spoofed content-type (image sent as video/mp4) would otherwise silently
+        # succeed instead of surfacing a clear error, so probe by actually trying
+        # to read a second frame rather than trusting frame_count alone.
+        if 0 <= frame_count <= 1 or frame_count < -1e6:
+            ok_first, _ = cap.read()
+            ok_second, _ = cap.read()
+            if ok_first and not ok_second:
+                raise VideoDecodeError(
+                    "This looks like a single still image, not a video — use the image upload instead"
+                )
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)  # rewind for the real extraction below
+
         if duration_s <= 0:
             # Metadata unavailable (some containers don't report it reliably) —
             # fall back to reading sequential frames at a fixed frame-count stride.

@@ -6,7 +6,9 @@ CONDITION_RANK = {"DRY": 0, "DAMP": 1, "WET": 2}
 
 
 def compute_trend(history_labels: list[str]) -> str:
-    """history_labels: past labels for this session, oldest first, NOT including the newest.
+    """history_labels: this session's labels oldest-first, INCLUDING the current/newest
+    observation as the last element — the trend describes the trajectory ending at
+    that observation, not the trajectory before it.
     Returns WETTING | DRYING | STABLE based on short-window direction."""
     if len(history_labels) < 2:
         return "STABLE"

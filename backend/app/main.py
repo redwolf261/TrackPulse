@@ -83,7 +83,10 @@ def _classify_and_persist(
             .order_by(Observation.created_at.asc())
         ).scalars().all()
 
-        trend = compute_trend(list(past))
+        # compute_trend expects the full window INCLUDING the current observation
+        # (it compares the window's first vs last label) — `past` only has prior
+        # rows since this one isn't inserted yet, so append it explicitly.
+        trend = compute_trend(list(past) + [result["label"]])
         suggestion = suggestion_for(result["label"], trend, result["confidence"])
 
         obs = Observation(
