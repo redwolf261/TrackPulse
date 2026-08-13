@@ -31,6 +31,49 @@ that's trending over a session, and give a plain-language suggestion.
   `datasets`/`huggingface_hub` libraries, and the classifier is initialized from
   torchvision's ImageNet-pretrained weights before fine-tuning.
 
+## Impact & scalability
+
+**Who this actually helps.** The direct persona is a race/strategy engineer or spotter
+who needs a fast, cheap second opinion on track condition from a camera feed —
+trackside, onboard, or broadcast — without waiting on a human to eyeball footage or a
+weather station that reports rain, not surface state. The gap those two miss is real:
+weather stations describe what's falling from the sky, not what's actually on the
+tarmac right now, and by the time a human calls it out over radio, conditions may have
+already shifted. The classifier itself is fast enough not to be the bottleneck: p50
+1.78ms / p95 2.76ms / p99 3.63ms per frame, CPU-only, ONNX Runtime, measured over 200
+runs (`experiments/exp00_rscd_baseline/onnx_benchmark_results.json`) — the
+observation-to-decision loop is limited by camera/network latency and human review
+time, not by this model.
+
+**What "scale" honestly looks like from here, in order of how close each is to real:**
+
+1. **More cameras, same pipeline, no architecture change.** The system is already
+   stateless per-frame and horizontally scalable — `/predict` and `/predict/video`
+   don't share state between requests beyond the SQLite write, so running this
+   behind a queue in front of N camera feeds (multiple corners of a track, multiple
+   vehicles' onboard cameras) is an infrastructure change, not a rearchitecture.
+2. **Beyond motorsport, to any domain where "does this surface look like X" from a
+   camera has value cheaply**: municipal road-icing/flooding alerts, warehouse floor
+   hazard detection, drone-based agricultural field-condition checks. The RSCD→racing
+   domain-gap work in this repo is a direct demonstration of the actual risk in doing
+   this — a model trained on one camera domain does not automatically transfer to
+   another (we measured a 43-point accuracy drop moving from road-camera data to
+   racing-camera data before domain adaptation), so "scaling to a new domain" is
+   real, costed engineering work, not a checkbox. We'd tell a team evaluating this
+   for a new surface/camera domain to expect the same three-round validate → find
+   the gap → close it cycle documented below, not a drop-in reuse.
+3. **What's NOT yet scalable, stated plainly**: SQLite and the free-tier deploy are a
+   demo footprint, not a production one — no auth, no rate limiting beyond file-size
+   caps, no persistent storage across redeploys, no multi-tenant isolation between
+   sessions beyond an unguessable session ID. None of that is hard to add, but none
+   of it exists yet, and pretending otherwise would undercut the rest of this
+   document's honesty.
+
+**Bottom line**: the interesting scaling story here isn't "add more GPUs," it's that
+visual domain transfer for track-condition perception is a genuinely measured,
+non-trivial cost — and this project is evidence for exactly how much that cost is
+and how to pay it down, not a claim that it's already solved.
+
 ## Why this is a fine-tune, not a from-scratch model or a single API call
 
 The task explicitly asks for something in between those two extremes. We:
