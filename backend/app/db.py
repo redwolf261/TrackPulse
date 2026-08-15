@@ -1,12 +1,46 @@
-"""SQLite persistence for TrackPulse prediction history."""
+"""Persistence for TrackPulse prediction history.
+
+Defaults to local SQLite for development (zero-setup, matches how this repo
+has always been run locally). In production, set DATABASE_URL to a Postgres
+connection string (Render's managed Postgres provides one directly) — the
+schema is plain SQLAlchemy with no SQLite-specific features, so the same
+models work against either backend unchanged.
+"""
+from __future__ import annotations
+
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 from sqlalchemy import create_engine, String, Float, DateTime, Integer
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
-DB_PATH = Path(__file__).resolve().parent.parent / "trackpulse.db"
-engine = create_engine(f"sqlite:///{DB_PATH}", connect_args={"check_same_thread": False})
+_DEFAULT_SQLITE_PATH = Path(__file__).resolve().parent.parent / "trackpulse.db"
+
+
+def _resolve_database_url() -> str:
+    url = os.environ.get("DATABASE_URL")
+    if not url:
+        return f"sqlite:///{_DEFAULT_SQLITE_PATH}"
+    # Render (and some other hosts) hand out "postgres://" URLs; SQLAlchemy 2.x
+    # needs a scheme naming an actual driver. We install psycopg (v3), so route
+    # both the bare "postgres://" and "postgresql://" forms to it explicitly
+    # rather than relying on SQLAlchemy's default (which assumes psycopg2).
+    if url.startswith("postgres://"):
+        url = url.replace("postgres://", "postgresql+psycopg://", 1)
+    elif url.startswith("postgresql://"):
+        url = url.replace("postgresql://", "postgresql+psycopg://", 1)
+    return url
+
+
+DATABASE_URL = _resolve_database_url()
+_is_sqlite = DATABASE_URL.startswith("sqlite")
+
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False} if _is_sqlite else {},
+    pool_pre_ping=not _is_sqlite,  # recycle stale connections against a real DB server
+)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 

@@ -271,6 +271,29 @@ export default function App() {
                 💡 {latest.suggestion}
               </div>
 
+              {latest.evidence && (
+                <div className={`evidence-trail trust-${latest.evidence.trust}`}>
+                  <div className="evidence-header">
+                    <span className="evidence-trust-badge">{latest.evidence.trust} TRUST</span>
+                    <span className="evidence-label">Why this reading?</span>
+                  </div>
+                  {latest.evidence.concerns.length > 0 && (
+                    <ul className="evidence-list evidence-concerns">
+                      {latest.evidence.concerns.map((c, i) => (
+                        <li key={`concern-${i}`}>⚠ {c}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {latest.evidence.reasons.length > 0 && (
+                    <ul className="evidence-list evidence-reasons">
+                      {latest.evidence.reasons.map((r, i) => (
+                        <li key={`reason-${i}`}>✓ {r}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+
               <p className="model-caveat">
                 This model is a single-frame visual estimate, not a physical wetness
                 measurement — treat it as one input alongside weather and driver reports,

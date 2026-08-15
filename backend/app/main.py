@@ -13,14 +13,18 @@ import logging
 import uuid
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, File, Form, UploadFile, HTTPException, Depends
+from fastapi import FastAPI, Request, File, Form, UploadFile, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import UnidentifiedImageError
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 
 from .db import init_db, get_session, Observation
+from .evidence import build_evidence_trail
 from .inference import classifier
 from .strategy import compute_trend, suggestion_for
 from .video import extract_frames, VideoDecodeError
@@ -32,6 +36,12 @@ ALLOWED_VIDEO_CONTENT_TYPES = {"video/mp4", "video/quicktime", "video/webm", "vi
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 MAX_VIDEO_UPLOAD_BYTES = 100 * 1024 * 1024
 
+# Per-client-IP limits on the expensive endpoints (inference + video decode).
+# Generous enough not to interfere with normal demo/judging use (a person
+# clicking through samples, uploading a few photos) while bounding the worst
+# case of one client hammering the free-tier deployment.
+limiter = Limiter(key_func=get_remote_address)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -40,6 +50,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="TrackPulse API", version="0.1.0", lifespan=lifespan)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
@@ -86,8 +98,13 @@ def _classify_and_persist(
         # compute_trend expects the full window INCLUDING the current observation
         # (it compares the window's first vs last label) — `past` only has prior
         # rows since this one isn't inserted yet, so append it explicitly.
-        trend = compute_trend(list(past) + [result["label"]])
+        past_labels = list(past)
+        trend = compute_trend(past_labels + [result["label"]])
         suggestion = suggestion_for(result["label"], trend, result["confidence"])
+        probabilities = {"DRY": result["p_dry"], "DAMP": result["p_damp"], "WET": result["p_wet"]}
+        evidence = build_evidence_trail(
+            result["label"], probabilities, trend, result["confidence"], past_labels
+        )
 
         obs = Observation(
             session_id=session_id,
@@ -112,17 +129,20 @@ def _classify_and_persist(
         "session_id": session_id,
         "observation_id": obs.id,
         "label": result["label"],
-        "probabilities": {"DRY": result["p_dry"], "DAMP": result["p_damp"], "WET": result["p_wet"]},
+        "probabilities": probabilities,
         "confidence": result["confidence"],
         "trend": trend,
         "suggestion": suggestion,
+        "evidence": evidence,
         "created_at": obs.created_at.isoformat(),
         "model_source": "trained-onnx" if classifier.using_trained_model else "fallback-heuristic",
     }
 
 
 @app.post("/predict")
+@limiter.limit("30/minute")
 async def predict(
+    request: Request,
     file: UploadFile = File(...),
     session_id: str | None = Form(None),
     db: Session = Depends(get_session),
@@ -141,7 +161,9 @@ async def predict(
 
 
 @app.post("/predict/video")
+@limiter.limit("10/minute")
 async def predict_video(
+    request: Request,
     file: UploadFile = File(...),
     session_id: str | None = Form(None),
     db: Session = Depends(get_session),

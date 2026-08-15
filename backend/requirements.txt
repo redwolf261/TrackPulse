@@ -7,3 +7,5 @@ Pillow==12.3.0
 sqlalchemy==2.0.51
 pydantic==2.13.4
 opencv-python-headless==5.0.0.93
+psycopg[binary]==3.3.4
+slowapi==0.1.9

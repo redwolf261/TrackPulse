@@ -2,6 +2,12 @@ const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
 
 export type Probabilities = { DRY: number; DAMP: number; WET: number };
 
+export interface EvidenceTrail {
+  trust: "HIGH" | "MODERATE" | "LOW";
+  reasons: string[];
+  concerns: string[];
+}
+
 export interface PredictResponse {
   session_id: string;
   observation_id: number;
@@ -10,6 +16,7 @@ export interface PredictResponse {
   confidence: number;
   trend: "WETTING" | "DRYING" | "STABLE";
   suggestion: string;
+  evidence: EvidenceTrail;
   created_at: string;
   model_source: "trained-onnx" | "fallback-heuristic";
 }
