@@ -3,7 +3,10 @@
    Carbon-dark theme · Neon telemetry accents · Glassmorphic panels
    ═══════════════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+/* Fonts are loaded via index.html's <link rel="preconnect"> + <link
+   rel="stylesheet">, not @import here — @import blocks CSS parsing until the
+   font stylesheet round-trips, while the HTML <link> can start fetching
+   immediately in parallel. Importing it a second time here was pure waste. */
 
 /* ─── Design Tokens ─────────────────────────────────────────────────────── */
 :root {
@@ -31,6 +34,18 @@
   --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
 
   color-scheme: dark;
+}
+
+/* Fixed-width tabular figures wherever the mono font is used for a data
+   readout (percentages, confidence, deltas) — prevents digits from shifting
+   width as values update, e.g. "8%" vs "23%" no longer jump the decimal
+   point/percent-sign position. JetBrains Mono is monospace already, but this
+   also covers the 'Fira Code'/monospace fallback chain consistently. */
+.pw-card-title, .cmd-tel-value, .cmd-tel-label, .result-confidence,
+.prob-bar-label, .prob-bar-pct, .evidence-trust-badge, .circuit-name,
+.circuit-grip-badge, .grip-gauge-svg text, .compound-name, .compound-delta,
+.lap-delta-value, .lap-delta-label, .surface-title, .surface-mode-btn {
+  font-variant-numeric: tabular-nums;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────────────── */
@@ -431,7 +446,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   padding: 2px 8px;
-  border-radius: 999px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
 }
 .trust-HIGH .evidence-trust-badge     { background: rgba(16,185,129,0.15); color: var(--dry); }
 .trust-MODERATE .evidence-trust-badge { background: rgba(245,158,11,0.15); color: var(--damp); }
