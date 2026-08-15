@@ -92,7 +92,7 @@ def _classify_and_persist(
         past = db.execute(
             select(Observation.label)
             .where(Observation.session_id == session_id)
-            .order_by(Observation.created_at.asc())
+            .order_by(Observation.created_at.asc(), Observation.id.asc())
         ).scalars().all()
 
         # compute_trend expects the full window INCLUDING the current observation
@@ -227,7 +227,7 @@ def history(session_id: str, db: Session = Depends(get_session)):
         rows = db.execute(
             select(Observation)
             .where(Observation.session_id == session_id)
-            .order_by(Observation.created_at.asc())
+            .order_by(Observation.created_at.asc(), Observation.id.asc())
         ).scalars().all()
     except SQLAlchemyError:
         logger.exception("DB read failed for session=%s", session_id)

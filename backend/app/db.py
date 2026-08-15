@@ -55,7 +55,7 @@ class Observation(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     session_id: Mapped[str] = mapped_column(String, index=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     label: Mapped[str] = mapped_column(String)  # DRY | DAMP | WET
     p_dry: Mapped[float] = mapped_column(Float)
     p_damp: Mapped[float] = mapped_column(Float)

@@ -78,12 +78,17 @@ def build_evidence_trail(
         concerns.append(f"Overall confidence is low ({confidence:.0%}).")
     elif confidence < MODERATE_CONFIDENCE_THRESHOLD:
         concerns.append(f"Confidence is only moderate ({confidence:.0%}).")
-    elif confidence > 0.85 and margin < CLOSE_CALL_MARGIN:
-        # The specific failure mode we measured: high confidence AND a close call
-        # underneath it — the number alone would look trustworthy but isn't.
+    elif margin < CLOSE_CALL_MARGIN:
+        # Reachable edge case: confidence cleared the moderate gate (≥ 60%) but
+        # the top two classes are still within 15 pp of each other — this happens
+        # when the third class also has meaningful probability (e.g. 62/48/10).
+        # The old check (confidence > 0.85 AND margin < 0.15) was mathematically
+        # impossible: if top_p > 0.85, the remaining two classes sum to < 0.15,
+        # so margin must exceed 0.70.  This replacement fires on real borderline
+        # predictions instead.
         concerns.append(
-            "High confidence but the top two classes are close — treat this as "
-            "less certain than the raw percentage implies."
+            f"Close call: {top_label} leads {second_label} by only {margin:.0%} "
+            f"despite clearing the confidence threshold — treat as less certain."
         )
 
     if not concerns:

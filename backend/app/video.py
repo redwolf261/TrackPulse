@@ -97,11 +97,26 @@ def _extract_by_time_interval(cap: cv2.VideoCapture, fps: float, duration_s: flo
 
 
 def _extract_by_frame_stride(cap: cv2.VideoCapture) -> list[bytes]:
-    """Fallback when duration metadata is missing: read sequentially, keep every
-    Nth frame based on a rough total-frame estimate (or just the first N reads)."""
+    """Fallback when duration metadata is missing: scan total frame count first,
+    then extract every Nth frame so samples are distributed across the full clip
+    rather than bunched at the beginning (the old stride=1 behaviour grabbed only
+    the first ~0.4s at 30fps regardless of clip length)."""
+    # First pass: count total readable frames so we can compute a meaningful stride.
+    total = 0
+    while total < 5000:  # safety valve
+        ok, _ = cap.read()
+        if not ok:
+            break
+        total += 1
+
+    if total == 0:
+        return []
+
+    stride = max(1, total // MAX_FRAMES_EXTRACTED)
+    cap.set(cv2.CAP_PROP_POS_FRAMES, 0)  # rewind for real extraction
+
     frames: list[bytes] = []
     frame_idx = 0
-    stride = 1
     while len(frames) < MAX_FRAMES_EXTRACTED:
         ok, frame = cap.read()
         if not ok:
@@ -109,8 +124,6 @@ def _extract_by_frame_stride(cap: cv2.VideoCapture) -> list[bytes]:
         if frame_idx % stride == 0:
             frames.append(_encode_jpeg(frame))
         frame_idx += 1
-        if frame_idx > 5000:  # safety valve against pathological/corrupt streams
-            break
     return frames
 
 

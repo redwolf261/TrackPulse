@@ -36,11 +36,22 @@ export default function App() {
   const [modelStatus, setModelStatus] = useState<{ loaded: boolean; source: string } | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  // Tracks the currently live object URL so we can revoke the previous one
+  // before creating a new one — prevents memory accumulation across uploads.
+  const previewUrlRef = useRef<string | null>(null);
+  // Tracks the session that was active when each async request started so
+  // we can drop stale responses if the user resets the session mid-flight.
+  const activeSessionRef = useRef(sessionId);
 
   const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"];
   const ACCEPTED_VIDEO_TYPES = ["video/mp4", "video/quicktime", "video/webm", "video/x-msvideo"];
   const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
   const MAX_VIDEO_BYTES = 100 * 1024 * 1024;
+
+  // Keep the session ref in sync so async handlers can detect staleness.
+  useEffect(() => {
+    activeSessionRef.current = sessionId;
+  }, [sessionId]);
 
   useEffect(() => {
     getHealth()
@@ -55,6 +66,15 @@ export default function App() {
     } catch {
       // non-fatal: chart just stays empty
     }
+  }, []);
+
+  const setPreviewSafe = useCallback((url: string | null, isVideo: boolean) => {
+    if (previewUrlRef.current) {
+      URL.revokeObjectURL(previewUrlRef.current);
+    }
+    previewUrlRef.current = url;
+    setPreviewUrl(url);
+    setPreviewIsVideo(isVideo);
   }, []);
 
   const handleFile = useCallback(
@@ -75,6 +95,10 @@ export default function App() {
         return;
       }
 
+      // Capture the session at the moment this request starts; if the user
+      // resets the session while we await the server, we discard the result.
+      const requestSession = sessionId;
+
       if (isVideo) {
         if (file.size > MAX_VIDEO_BYTES) {
           setError(`Video is too large (${(file.size / 1024 / 1024).toFixed(1)}MB) — max is 100MB.`);
@@ -82,19 +106,22 @@ export default function App() {
         }
         setLoading(true);
         setLoadingMessage("Extracting and analyzing frames — this can take a moment…");
-        setPreviewUrl(URL.createObjectURL(file));
-        setPreviewIsVideo(true);
+        setPreviewSafe(URL.createObjectURL(file), true);
         try {
-          const result = await predictVideo(file, sessionId);
+          const result = await predictVideo(file, requestSession);
+          if (activeSessionRef.current !== requestSession) return; // stale — session was reset
           if (result.observations.length > 0) {
             setLatest(result.observations[result.observations.length - 1]);
           }
-          await refreshHistory(sessionId);
+          await refreshHistory(requestSession);
         } catch (e) {
+          if (activeSessionRef.current !== requestSession) return;
           setError(e instanceof Error ? e.message : "Video processing failed");
         } finally {
-          setLoading(false);
-          setLoadingMessage(null);
+          if (activeSessionRef.current === requestSession) {
+            setLoading(false);
+            setLoadingMessage(null);
+          }
         }
         return;
       }
@@ -105,41 +132,49 @@ export default function App() {
       }
 
       setLoading(true);
-      setPreviewUrl(URL.createObjectURL(file));
-      setPreviewIsVideo(false);
+      setPreviewSafe(URL.createObjectURL(file), false);
       try {
-        const result = await predict(file, sessionId);
+        const result = await predict(file, requestSession);
+        if (activeSessionRef.current !== requestSession) return; // stale
         setLatest(result);
-        await refreshHistory(sessionId);
+        await refreshHistory(requestSession);
       } catch (e) {
+        if (activeSessionRef.current !== requestSession) return;
         setError(e instanceof Error ? e.message : "Prediction failed");
       } finally {
-        setLoading(false);
+        if (activeSessionRef.current === requestSession) {
+          setLoading(false);
+        }
       }
     },
-    [sessionId, refreshHistory]
+    [sessionId, refreshHistory, setPreviewSafe]
   );
 
   const loadSample = useCallback(
     async (url: string, filename: string) => {
       setError(null);
       setLoading(true);
+      const requestSession = sessionId;
       try {
         const res = await fetch(url);
         const blob = await res.blob();
         const file = new File([blob], filename, { type: blob.type || "image/jpeg" });
-        setPreviewUrl(URL.createObjectURL(file));
-        setPreviewIsVideo(false);
-        const result = await predict(file, sessionId);
+        if (activeSessionRef.current !== requestSession) return;
+        setPreviewSafe(URL.createObjectURL(file), false);
+        const result = await predict(file, requestSession);
+        if (activeSessionRef.current !== requestSession) return;
         setLatest(result);
-        await refreshHistory(sessionId);
+        await refreshHistory(requestSession);
       } catch (e) {
+        if (activeSessionRef.current !== requestSession) return;
         setError(e instanceof Error ? e.message : "Failed to load sample image");
       } finally {
-        setLoading(false);
+        if (activeSessionRef.current === requestSession) {
+          setLoading(false);
+        }
       }
     },
-    [sessionId, refreshHistory]
+    [sessionId, refreshHistory, setPreviewSafe]
   );
 
   const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
@@ -151,12 +186,16 @@ export default function App() {
 
   const resetSession = () => {
     const sid = newSessionId();
+    // Update the ref first so any in-flight async handlers see the new session
+    // immediately and drop their stale results.
+    activeSessionRef.current = sid;
     setSessionId(sid);
     setLatest(null);
-    setPreviewUrl(null);
-    setPreviewIsVideo(false);
+    setPreviewSafe(null, false);
     setHistory([]);
     setError(null);
+    setLoading(false);
+    setLoadingMessage(null);
   };
 
   const chartData = history.map((obs, i) => ({
