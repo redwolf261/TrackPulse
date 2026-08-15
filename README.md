@@ -62,17 +62,58 @@ time, not by this model.
    real, costed engineering work, not a checkbox. We'd tell a team evaluating this
    for a new surface/camera domain to expect the same three-round validate → find
    the gap → close it cycle documented below, not a drop-in reuse.
-3. **What's NOT yet scalable, stated plainly**: SQLite and the free-tier deploy are a
-   demo footprint, not a production one — no auth, no rate limiting beyond file-size
-   caps, no persistent storage across redeploys, no multi-tenant isolation between
-   sessions beyond an unguessable session ID. None of that is hard to add, but none
-   of it exists yet, and pretending otherwise would undercut the rest of this
-   document's honesty.
+3. **What's NOT yet scalable, stated plainly**: no auth, no multi-tenant isolation
+   between sessions beyond an unguessable session ID, free-tier hosting (cold starts
+   on the deployed backend after idling). Rate limiting (per-IP, 30 req/min on image
+   upload, 10/min on video) and a Postgres-backed persistence path (tested against a
+   real instance, currently defaults to SQLite for local dev) are built and working
+   as of this writing, closing two of the gaps from an earlier pass — the remaining
+   ones are real and not yet closed, not a checklist we're claiming to have finished.
 
 **Bottom line**: the interesting scaling story here isn't "add more GPUs," it's that
 visual domain transfer for track-condition perception is a genuinely measured,
 non-trivial cost — and this project is evidence for exactly how much that cost is
 and how to pay it down, not a claim that it's already solved.
+
+## Business model
+
+We built this as a hackathon prototype, not a company — so this section is an
+honest sketch of a plausible path, not a claim we've validated a market.
+
+**Who would actually pay, and for what.** Not a per-consumer app — the buyer is a
+team, series, or venue that already has camera infrastructure and a decision that
+depends on track condition: a race/strategy engineer's tooling budget, a track-day
+or club-racing operator managing driver safety calls, or a broadcast/production
+team wanting an automated on-screen condition indicator. The honest constraint from
+our own testing: professional F1-level teams already have humans and (likely)
+better sensors for this; the more realistic near-term buyer is a level below that
+— club racing, karting, track-day operators, driving schools — where a human
+spotter watching a camera feed is a real cost and a $0-marginal-cost model call is
+a genuine substitute, not a nice-to-have.
+
+**Plausible model, in order of how validated each is:**
+
+1. **Usage-based API** (most directly buildable from what exists): charge per
+   inference or per session, aimed at teams/apps who want to embed this rather than
+   use our UI. We already have the inference endpoint; this is a packaging question
+   (auth + billing), not a new technology.
+2. **SaaS seat/subscription** for a race-ops team: the dashboard + trend history +
+   Evidence Trail as a tool a strategy engineer logs into during a session. Requires
+   the auth/persistence work in the Impact & Scalability section above — a real,
+   scoped next step, not hand-waving.
+3. **Licensing the fine-tuned model weights** to a team building their own tooling —
+   lowest-effort to ship, but the value we're actually selling in that case is the
+   racing-domain adaptation work (see the Methodology section) more than the base
+   model, and licensing terms would need to respect the RSCD data's non-commercial
+   provenance (see Hugging Face Hub usage above) — a real constraint we'd have to
+   resolve before this option is legally available, not just an execution detail.
+
+**What we're explicitly not claiming**: revenue projections, market size, or that
+we've spoken to a real customer. Those would be fabricated for a hackathon
+submission. What we can defend is that the underlying capability (fast, cheap,
+camera-based surface condition inference) has a real cost structure we've actually
+measured — 1.78ms p50 inference, no GPU required — which is the input a real
+unit-economics conversation would start from, not a guess.
 
 ## Why this is a fine-tune, not a from-scratch model or a single API call
 
