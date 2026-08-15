@@ -1,0 +1,5 @@
+accepted 25 / scanned 219/489
+accepted 50 / scanned 338/489
+
+DONE. scanned=489 accepted=53 rejected={'title': 12, 'license': 0, 'dup': 1, 'download_fail': 419, 'too_small': 4}
+saved staged_accepted2.json

@@ -1,0 +1,69 @@
+device: cuda | checkpoint: experiments/exp05_data_moat/checkpoints_optionB/best_model.pth
+
+=== (1) Original 49-image eval set ===
+{
+  "n_total": 49,
+  "n_ambiguous_excluded": 5,
+  "n_quantitative": 44,
+  "accuracy": 0.6590909090909091,
+  "macro_f1": 0.4688787681630882,
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.7142857142857143,
+  "dry_recall": 0.6333333333333333,
+  "dry_precision": 0.8260869565217391,
+  "false_wet_rate": 0.16666666666666666,
+  "false_dry_rate": 0.2857142857142857,
+  "mean_confidence_correct": 0.8547545209013182,
+  "mean_confidence_incorrect": 0.6954297423362732
+}
+
+=== (2) v2 67-image eval set ===
+{
+  "n_total": 67,
+  "n_ambiguous_excluded": 5,
+  "n_quantitative": 62,
+  "accuracy": 0.7258064516129032,
+  "macro_f1": 0.7234567901234569,
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.7142857142857143,
+  "dry_recall": 0.6333333333333333,
+  "dry_precision": 0.7916666666666666,
+  "false_wet_rate": 0.16666666666666666,
+  "false_dry_rate": 0.2857142857142857,
+  "mean_confidence_correct": 0.8594372305605147,
+  "mean_confidence_incorrect": 0.6944895947680754
+}
+
+=== (3) v3 103-image eval set (NEW, exp05) ===
+{
+  "n_total": 103,
+  "n_ambiguous_excluded": 5,
+  "n_quantitative": 98,
+  "accuracy": 0.7040816326530612,
+  "macro_f1": 0.6979591836734693,
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.6333333333333333,
+  "dry_recall": 0.717391304347826,
+  "dry_precision": 0.75,
+  "false_wet_rate": 0.13043478260869565,
+  "false_dry_rate": 0.26666666666666666,
+  "mean_confidence_correct": 0.8483525043812351,
+  "mean_confidence_incorrect": 0.7241271076531246
+}
+
+=== (4) RSCD 305-image test set ===
+accuracy: 0.7639344262295082 macro_f1: 0.7385589555617721 WET recall: 0.7662337662337663
+
+saved experiments/exp05_data_moat/eval_results_optionB.json

@@ -1,0 +1,22 @@
+{
+  "exp02_baseline": {
+    "DRY_recall": 0.6333333333333333,
+    "DAMP_recall": 0.8333333333333334,
+    "WET_recall": 0.9285714285714286
+  },
+  "pure_oversample": {
+    "DRY_recall": 0.8,
+    "DAMP_recall": 0.7777777777777778,
+    "WET_recall": 0.7142857142857143
+  },
+  "light_damp": {
+    "DRY_recall": 0.7,
+    "DAMP_recall": 0.8333333333333334,
+    "WET_recall": 0.5714285714285714
+  },
+  "weight_only": {
+    "DRY_recall": 0.7333333333333333,
+    "DAMP_recall": 0.7222222222222222,
+    "WET_recall": 0.6428571428571429
+  }
+}

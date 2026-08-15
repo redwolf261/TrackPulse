@@ -1,0 +1,69 @@
+device: cuda | checkpoint: experiments/exp02_racing_v2/checkpoints/best_model.pth
+
+=== (1) Original 49-image eval set ===
+{
+  "n_total": 49,
+  "n_ambiguous_excluded": 5,
+  "n_quantitative": 44,
+  "accuracy": 0.7272727272727273,
+  "macro_f1": 0.515959595959596,
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.9285714285714286,
+  "dry_recall": 0.6333333333333333,
+  "dry_precision": 0.95,
+  "false_wet_rate": 0.2,
+  "false_dry_rate": 0.07142857142857142,
+  "mean_confidence_correct": 0.8848692923784256,
+  "mean_confidence_incorrect": 0.8285642514626185
+}
+
+=== (2) v2 67-image eval set ===
+{
+  "n_total": 67,
+  "n_ambiguous_excluded": 5,
+  "n_quantitative": 62,
+  "accuracy": 0.7580645161290323,
+  "macro_f1": 0.7616495991108994,
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.9285714285714286,
+  "dry_recall": 0.6333333333333333,
+  "dry_precision": 0.8636363636363636,
+  "false_wet_rate": 0.2,
+  "false_dry_rate": 0.07142857142857142,
+  "mean_confidence_correct": 0.9202259690203565,
+  "mean_confidence_incorrect": 0.8289028286933899
+}
+
+=== (3) v3 103-image eval set (NEW, exp05) ===
+{
+  "n_total": 103,
+  "n_ambiguous_excluded": 5,
+  "n_quantitative": 98,
+  "accuracy": 0.6632653061224489,
+  "macro_f1": 0.6550783699059561,
+  "classes_order": [
+    "DRY",
+    "DAMP",
+    "WET"
+  ],
+  "wet_recall": 0.6,
+  "dry_recall": 0.6739130434782609,
+  "dry_precision": 0.7380952380952381,
+  "false_wet_rate": 0.17391304347826086,
+  "false_dry_rate": 0.23333333333333334,
+  "mean_confidence_correct": 0.9174210392511808,
+  "mean_confidence_incorrect": 0.8729114333788554
+}
+
+=== (4) RSCD 305-image test set ===
+accuracy: 0.7475409836065574 macro_f1: 0.7243568916339617 WET recall: 0.7532467532467533
+
+saved experiments/exp05_data_moat/eval_results_exp02_baseline.json

@@ -1,0 +1,44 @@
+already have 450 accepted; skipping their titles/hashes
+accepted total 460 (idx=460) / scanned 135/976
+accepted total 480 (idx=480) / scanned 155/976
+accepted total 500 (idx=500) / scanned 177/976
+accepted total 520 (idx=520) / scanned 198/976
+accepted total 540 (idx=540) / scanned 219/976
+accepted total 560 (idx=560) / scanned 239/976
+accepted total 580 (idx=580) / scanned 260/976
+accepted total 600 (idx=600) / scanned 280/976
+accepted total 620 (idx=620) / scanned 301/976
+accepted total 640 (idx=640) / scanned 322/976
+accepted total 660 (idx=660) / scanned 343/976
+accepted total 680 (idx=680) / scanned 363/976
+accepted total 700 (idx=700) / scanned 384/976
+accepted total 720 (idx=720) / scanned 405/976
+accepted total 740 (idx=740) / scanned 428/976
+accepted total 760 (idx=760) / scanned 450/976
+accepted total 780 (idx=780) / scanned 472/976
+accepted total 800 (idx=800) / scanned 493/976
+accepted total 820 (idx=820) / scanned 515/976
+accepted total 840 (idx=840) / scanned 535/976
+accepted total 860 (idx=860) / scanned 557/976
+accepted total 880 (idx=880) / scanned 581/976
+accepted total 900 (idx=900) / scanned 601/976
+accepted total 920 (idx=920) / scanned 622/976
+accepted total 940 (idx=940) / scanned 642/976
+accepted total 960 (idx=960) / scanned 662/976
+accepted total 980 (idx=980) / scanned 682/976
+accepted total 1000 (idx=1000) / scanned 702/976
+accepted total 1020 (idx=1020) / scanned 723/976
+accepted total 1040 (idx=1040) / scanned 743/976
+accepted total 1060 (idx=1060) / scanned 763/976
+accepted total 1080 (idx=1080) / scanned 783/976
+accepted total 1100 (idx=1100) / scanned 804/976
+accepted total 1120 (idx=1120) / scanned 825/976
+accepted total 1140 (idx=1140) / scanned 845/976
+accepted total 1160 (idx=1160) / scanned 869/976
+accepted total 1180 (idx=1180) / scanned 893/976
+accepted total 1200 (idx=1200) / scanned 919/976
+accepted total 1220 (idx=1220) / scanned 939/976
+accepted total 1240 (idx=1240) / scanned 959/976
+
+DONE. scanned=976 total_accepted=1253 rejected={'title': 2, 'license': 0, 'dup': 22, 'download_fail': 6, 'too_small': 33, 'already': 110}
+saved staged_accepted4.json

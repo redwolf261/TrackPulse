@@ -1,0 +1,23 @@
+device: cuda
+GPU: NVIDIA GeForce RTX 5050 Laptop GPU
+CUDA version: 12.8
+combined racing train (v1+v2+v3, raw, pre-oversample) class counts: {'WET': 145, 'DAMP': 47, 'DRY': 531}
+  (v3 contributes: {'DAMP': 5, 'DRY': 395, 'WET': 76} )
+[optionB] per-class oversample factors: {'DRY': 1, 'DAMP': 4, 'WET': 2} | extra inverse-freq class weight: True
+combined racing train (post-strategy) class counts: {'WET': 290, 'DAMP': 188, 'DRY': 531}
+RSCD train=2582 val=379
+racing train(raw)=723 train(post-strategy)=1009 val=130
+COMBINED train=3591 val=509
+combined train class counts: {'DRY': 1606, 'DAMP': 1019, 'WET': 966}
+class weights (used in CrossEntropyLoss): [0.7077840566635132, 1.115506649017334, 1.1767094135284424]
+initialized from exp02 checkpoint (production model): c:/Users/Rivan/Projects/AI_Grand_Prix/experiments/exp02_racing_v2/checkpoints/best_model.pth
+[optionB] epoch 1/12 train_loss=0.3370 val_acc=0.7760 val_macroF1=0.7459 time=56.1s lr=2.95e-04
+[optionB] epoch 2/12 train_loss=0.2616 val_acc=0.7623 val_macroF1=0.7348 time=48.3s lr=2.80e-04
+[optionB] epoch 3/12 train_loss=0.2405 val_acc=0.7760 val_macroF1=0.7416 time=47.9s lr=2.56e-04
+[optionB] epoch 4/12 train_loss=0.1968 val_acc=0.7662 val_macroF1=0.7343 time=41.8s lr=2.25e-04
+[optionB] epoch 5/12 train_loss=0.1933 val_acc=0.7623 val_macroF1=0.7295 time=38.0s lr=1.89e-04
+[optionB] early stopping at epoch 5 (best val_macro_f1=0.7459)
+saved training_log_optionB.csv
+
+[optionB] BEST val_macro_f1=0.7459, checkpoint saved to c:/Users/Rivan/Projects/AI_Grand_Prix/experiments/exp05_data_moat\checkpoints_optionB/best_model.pth
+saved training_summary_optionB.json

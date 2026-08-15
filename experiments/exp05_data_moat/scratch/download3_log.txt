@@ -1,0 +1,24 @@
+already have 53 accepted from prior run; skipping their titles
+accepted total 60 (idx=60) / scanned 45/489
+accepted total 80 (idx=80) / scanned 69/489
+accepted total 100 (idx=100) / scanned 93/489
+accepted total 120 (idx=120) / scanned 116/489
+accepted total 140 (idx=140) / scanned 137/489
+accepted total 160 (idx=160) / scanned 162/489
+accepted total 180 (idx=180) / scanned 183/489
+accepted total 200 (idx=200) / scanned 204/489
+accepted total 220 (idx=220) / scanned 227/489
+accepted total 240 (idx=240) / scanned 261/489
+accepted total 260 (idx=260) / scanned 282/489
+accepted total 280 (idx=280) / scanned 302/489
+accepted total 300 (idx=300) / scanned 330/489
+accepted total 320 (idx=320) / scanned 352/489
+accepted total 340 (idx=340) / scanned 374/489
+accepted total 360 (idx=360) / scanned 394/489
+accepted total 380 (idx=380) / scanned 414/489
+accepted total 400 (idx=400) / scanned 435/489
+accepted total 420 (idx=420) / scanned 457/489
+accepted total 440 (idx=440) / scanned 477/489
+
+DONE. scanned=489 total_accepted=450 rejected={'title': 12, 'license': 0, 'dup': 13, 'download_fail': 1, 'too_small': 13, 'already': 53}
+saved staged_accepted3.json

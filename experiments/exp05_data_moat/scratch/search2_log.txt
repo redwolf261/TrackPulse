@@ -1,0 +1,49 @@
+search: damp track motorsport
+search: drying track Formula 1
+search: track evolution rain
+search: light rain Formula 1 circuit
+search: wet drying racing circuit
+search: intermediate tyres wet track
+search: track drying racing car
+search: damp asphalt racing circuit
+search: greasy track racing
+search: rain affected track racing car
+search: spray drying race track
+search: damp circuit racing car photo
+category: 2021 Belgian Grand Prix
+category: 2008 British Grand Prix
+category: 2007 European Grand Prix
+category: 2000 European Grand Prix
+category: Formula One cars in the rain
+category: 2021 Turkish Grand Prix
+category: 2021 Russian Grand Prix
+category: 2019 German Grand Prix
+search: Formula 1 pit lane racing car
+search: Formula 1 onboard camera track
+search: touring car racing track dry
+search: endurance racing track car
+search: Le Mans racing car track
+search: DTM racing car track
+search: IndyCar racing car track
+search: Formula E racing car street circuit
+search: historic Grand Prix racing car 1990s track
+search: Formula 3 racing car track
+search: GT racing car circuit track
+search: rally circuit racing car tarmac
+category: 24 Hours of Le Mans
+category: DTM (touring car racing)
+category: IndyCar Series
+category: Formula E
+category: N%C3%BCrburgring
+category: Circuit de Spa-Francorchamps
+category: British Touring Car Championship
+category: World Touring Car Championship
+search: wet Formula 1 track racing car
+search: heavy rain motorsport racing car
+search: spray wet track racing car photo
+search: rain race track flooded car
+search: wet touring car race track
+search: monsoon race track car
+total unique candidate titles: 493
+got imageinfo for 493 titles
+saved 489 candidates with imageinfo (mime-filtered)

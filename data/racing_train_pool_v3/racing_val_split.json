@@ -1,0 +1,852 @@
+[
+ {
+  "filename": "racetrainv3_003_DAMP.jpg",
+  "label": "DAMP",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Kimi Raikkonen 2008 Britain.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/18179822@N00\">Marc Evans</a> from Newbury, UK",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Kimi_Raikkonen_2008_Britain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_003_DAMP.jpg"
+ },
+ {
+  "filename": "racetrainv3_047_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:Formula E racing car street circuit",
+  "source_title": "File:Juju Noda Super Formula Round 5 Suzuka Post-Race 2026.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:BWard_1997\" title=\"User:BWard 1997\">BWard 1997</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Juju_Noda_Super_Formula_Round_5_Suzuka_Post-Race_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_047_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_328_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Formula 1600 (5822199187).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Formula_1600_%285822199187%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_328_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_405_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2014 Japanese Grand Prix",
+  "source_title": "File:Red Bull Racing, No.3 Daniel Ricciardo (2) (15714672286).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78475089@N02\">Takayuki Suzuki</a> from Kanagawa, Japan",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Red_Bull_Racing%2C_No.3_Daniel_Ricciardo_%282%29_%2815714672286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_405_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_166_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 102848AA (27259503142).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/MONGP2016_0526_102848AA_%2827259503142%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_166_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_099_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:Circuit de Spa-Francorchamps",
+  "source_title": "File:Guan Yu Zhou, Formel 4 2015.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Chris501\" title=\"User:Chris501\">Chris501</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Guan_Yu_Zhou%2C_Formel_4_2015.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_099_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_243_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:Spectators and a McLaren Honda (27333120093).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/79478905@N04\">35mmMan</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Spectators_and_a_McLaren_Honda_%2827333120093%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_243_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_268_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian GP Friday 14.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a> from Canada",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/2011_Canadian_GP_Friday_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_268_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_213_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 135455AA (26750884103).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/MONGP2016_0526_135455AA_%2826750884103%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_213_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_340_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Heikki Kovalainen (5816762443).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Heikki_Kovalainen_%285816762443%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_340_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_232_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 142612AA (27357286225).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/MONGP2016_0526_142612AA_%2827357286225%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_232_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_445_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Fuji 2008 P1 nick4 (3054805287).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78919492@N00\">nimame</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Fuji_2008_P1_nick4_%283054805287%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_445_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_186_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 111303AA (27081822640).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/MONGP2016_0526_111303AA_%2827081822640%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_186_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_452_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Fuji 2008 P2 ALO1 (3055671866).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78919492@N00\">nimame</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Fuji_2008_P2_ALO1_%283055671866%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_452_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_065_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:GT racing car circuit track",
+  "source_title": "File:GT Race 2 - British GT Championship - Lamborghini (51372322792).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/79478905@N04\">35mmMan</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/GT_Race_2_-_British_GT_Championship_-_Lamborghini_%2851372322792%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_065_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_455_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Fuji 2008 P2 felipe1 (3055672410).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78919492@N00\">nimame</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Fuji_2008_P2_felipe1_%283055672410%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_455_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_190_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 112341AA (27081809810).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/MONGP2016_0526_112341AA_%2827081809810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_190_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_373_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:My view for the weekend (6019804586).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/41894164051@N01\">Mat Hampson</a> from Philadelphia, USA",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/My_view_for_the_weekend_%286019804586%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_373_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_321_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Force India Brakes (5817324116).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Force_India_Brakes_%285817324116%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_321_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_428_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Fuji 2008 P1 felipe2 (3055393736).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78919492@N00\">nimame</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Fuji_2008_P1_felipe2_%283055393736%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_428_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_080_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:Circuit de Spa-Francorchamps",
+  "source_title": "File:Circuit de Spa-Francorchamps 06.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:FrDr&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:FrDr (page does not exist)\">FrDr</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Circuit_de_Spa-Francorchamps_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_080_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_027_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:24 Hours of Le Mans",
+  "source_title": "File:Car 65 Manuel Maldonado in Le Mans 2023.jpg",
+  "license": "CC0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Briansoprano&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Briansoprano (page does not exist)\">Briansoprano</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Car_65_Manuel_Maldonado_in_Le_Mans_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_027_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_294_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian Grand Prix (5820417271).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/2011_Canadian_Grand_Prix_%285820417271%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_294_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_376_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:NICK HEIDFELD CANADIAN GP 2011.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/NICK_HEIDFELD_CANADIAN_GP_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_376_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_196_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 130322AA (27286745001).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/MONGP2016_0526_130322AA_%2827286745001%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_196_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_100_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:Circuit de Spa-Francorchamps",
+  "source_title": "File:Guanyu Zhou ADAC Formel 4 2015 Spa.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Poppo154&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Poppo154 (page does not exist)\">Poppo154</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Guanyu_Zhou_ADAC_Formel_4_2015_Spa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_100_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_164_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 100834AA (26749857264).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/MONGP2016_0526_100834AA_%2826749857264%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_164_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_170_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 102940AA (27259490492).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/MONGP2016_0526_102940AA_%2827259490492%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_170_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_160_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 100003AA (27081862150).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/MONGP2016_0526_100003AA_%2827081862150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_160_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_364_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Medical Car (5817329098).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Medical_Car_%285817329098%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_364_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_273_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian GP Friday 19.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a> from Canada",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/2011_Canadian_GP_Friday_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_273_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_115_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:Circuit de Spa-Francorchamps",
+  "source_title": "File:Rebellion R13 - Gibson - Rebellion Racing - 2019 6 Hours of Spa-Francorchamps.jpg",
+  "license": "CC BY 2.5",
+  "artist": "Alain Janssoone",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Rebellion_R13_-_Gibson_-_Rebellion_Racing_-_2019_6_Hours_of_Spa-Francorchamps.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_115_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_175_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 111045AA (27259472842).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/MONGP2016_0526_111045AA_%2827259472842%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_175_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_159_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 095952AA (27286791371).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/MONGP2016_0526_095952AA_%2827286791371%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_159_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_161_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 100023AA (27286785151).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/MONGP2016_0526_100023AA_%2827286785151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_161_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_436_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Fuji 2008 P1 kimi5 (3055640232).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78919492@N00\">nimame</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Fuji_2008_P1_kimi5_%283055640232%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_436_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_094_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:Circuit de Spa-Francorchamps",
+  "source_title": "File:David Beckmann, Formel 4 2015.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Chris501\" title=\"User:Chris501\">Chris501</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/David_Beckmann%2C_Formel_4_2015.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_094_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_270_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian GP Friday 16.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a> from Canada",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/2011_Canadian_GP_Friday_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_270_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_233_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 142640AA (26749767764).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/MONGP2016_0526_142640AA_%2826749767764%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_233_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_098_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:Circuit de Spa-Francorchamps",
+  "source_title": "File:Ginetta G57 Spa.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Poppo154&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Poppo154 (page does not exist)\">Poppo154</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Ginetta_G57_Spa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_098_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_133_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:heavy rain motorsport racing car",
+  "source_title": "File:2010 IZOD IndyCar Series - São Paulo Indy 300 Raphael Matos - Luczo Dragon Racing de Ferran Motorsports (27084365095).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/45600179@N08\">Deni Williams</a> from São Paulo, Brasil / Brazil",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/2010_IZOD_IndyCar_Series_-_S%C3%A3o_Paulo_Indy_300_Raphael_Matos_-_Luczo_Dragon_Racing_de_Ferran_Motorsports_%2827084365095%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_133_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_059_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:Formula 3 racing car track",
+  "source_title": "File:Formula LGB Hyundai Rams Valvoline 02.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Race27\" title=\"User:Race27\">Race27</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Formula_LGB_Hyundai_Rams_Valvoline_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_059_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_318_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Flight of the bumblebees (6019267993).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/41894164051@N01\">Mat Hampson</a> from Philadelphia, USA",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Flight_of_the_bumblebees_%286019267993%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_318_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_135_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:wet touring car race track",
+  "source_title": "File:BTCC Grid Race 1 Silverstone 2019.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:BWard_1997\" title=\"User:BWard 1997\">BWard 1997</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/BTCC_Grid_Race_1_Silverstone_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_135_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_043_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:Formula E racing car street circuit",
+  "source_title": "File:Super Formula Parc fermé Round 5 Suzuka 2026.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:BWard_1997\" title=\"User:BWard 1997\">BWard 1997</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Super_Formula_Parc_ferm%C3%A9_Round_5_Suzuka_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_043_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_185_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 111302AA (27081825510).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/MONGP2016_0526_111302AA_%2827081825510%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_185_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_008_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:drying track Formula 1, search:track drying racing car",
+  "source_title": "File:Formule Renault - GTRO RACING - Circuit Los Arcos Navarra Espagne Spain - Picture Image Photography (15659708526).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/80641068@N07\">Grand Parc - Bordeaux, France</a> from France",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Formule_Renault_-_GTRO_RACING_-_Circuit_Los_Arcos_Navarra_Espagne_Spain_-_Picture_Image_Photography_%2815659708526%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_008_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_207_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 131221AA (27323784766).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/MONGP2016_0526_131221AA_%2827323784766%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_207_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_444_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Fuji 2008 P1 nick3 (3055327436).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78919492@N00\">nimame</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Fuji_2008_P1_nick3_%283055327436%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_444_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_421_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2008 Japanese Grand Prix",
+  "source_title": "File:Formation lap Japan 2008.jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/66742834@N00\">nh824</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Formation_lap_Japan_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_421_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_010_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:drying track Formula 1, search:track drying racing car",
+  "source_title": "File:Formule Renault - GTRO RACING - Ecole de pilotage - Circuit Los Arcos Navarra Spain Espagne - Image Picture Photography (15498442020).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/80641068@N07\">Grand Parc - Bordeaux, France</a> from France",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Formule_Renault_-_GTRO_RACING_-_Ecole_de_pilotage_-_Circuit_Los_Arcos_Navarra_Spain_Espagne_-_Image_Picture_Photography_%2815498442020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_010_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_013_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:track drying racing car",
+  "source_title": "File:Claire Decker 2017 Super Late Model DRP.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Royalbroil\" title=\"User:Royalbroil\">Royalbroil</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Claire_Decker_2017_Super_Late_Model_DRP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_013_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_382_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Race07CAN.png",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Odor\" title=\"User:Odor\">Odor</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Race07CAN.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_382_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_287_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian Grand Prix (5819625568).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/2011_Canadian_Grand_Prix_%285819625568%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_287_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_169_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 102920AA (26750922373).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/MONGP2016_0526_102920AA_%2826750922373%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_169_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_051_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:Formula E racing car street circuit",
+  "source_title": "File:Kamui Kobayashi Super Formula Round 5 Suzuka Post-Race 2026.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:BWard_1997\" title=\"User:BWard 1997\">BWard 1997</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Kamui_Kobayashi_Super_Formula_Round_5_Suzuka_Post-Race_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_051_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_149_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 095501AA (27081881850).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/MONGP2016_0526_095501AA_%2827081881850%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_149_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_384_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Vettel Kanada 2011.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Vettel_2011_Canadian_Grand_Prix.jpg\" title=\"File:Vettel 2011 Canadian Grand Prix.jpg\">Vettel_2011_Canadian_Grand_Prix.jpg</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a></li>\n<li>derivative work: <a href=\"//commons.wikimedia.org/wiki/User:F1fans\" title=\"User:F1fans\">F1fans</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:F1fans\" title=\"User talk:F1fans\"><span class=\"signature-talk\">talk</span></a>)</li></ul>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Vettel_Kanada_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_384_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_299_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian Grand Prix (5820978412).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/2011_Canadian_Grand_Prix_%285820978412%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_299_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_306_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian Grand Prix (5822757756).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/2011_Canadian_Grand_Prix_%285822757756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_306_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_217_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 135543AA (27357291735).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/MONGP2016_0526_135543AA_%2827357291735%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_217_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_216_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 135521AA (27357293855).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/MONGP2016_0526_135521AA_%2827357293855%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_216_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_323_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Formula 1600 (5822196773).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Formula_1600_%285822196773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_323_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_324_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Formula 1600 (5822197125).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">ph-stop</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Formula_1600_%285822197125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_324_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_176_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 111045AB (27259469852).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/MONGP2016_0526_111045AB_%2827259469852%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_176_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_221_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:MONGP2016 0526 140611AA (26750874013).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/94169616@N03\">Matthew Lamb</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/MONGP2016_0526_140611AA_%2826750874013%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_221_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_260_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian GP Friday 06.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a> from Canada",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/2011_Canadian_GP_Friday_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_260_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_413_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2019 Japanese Grand Prix",
+  "source_title": "File:2019 Japanese Grand Prix Nico Hülkenberg (49028198968).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "Takayuki Suzuki",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/2019_Japanese_Grand_Prix_Nico_H%C3%BClkenberg_%2849028198968%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_413_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_353_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:Kovalainen gp canada 2011.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "ph-stop",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Kovalainen_gp_canada_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_353_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_017_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:Formula 1 pit lane racing car",
+  "source_title": "File:1970 Italian GP - Siffert's March-Ford 701.jpg",
+  "license": "Public domain",
+  "artist": "Muzio Photo / SAEMEC Editions (S/688)",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/1970_Italian_GP_-_Siffert%27s_March-Ford_701.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_017_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_012_DRY.jpg",
+  "label": "DRY",
+  "note": "source queries: search:intermediate tyres wet track",
+  "source_title": "File:Lewis Hamilton on intermedite tyres (21448644902).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/24388834@N04\">pedrik</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Lewis_Hamilton_on_intermedite_tyres_%2821448644902%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_012_DRY.jpg"
+ },
+ {
+  "filename": "racetrainv3_542_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:Lewis Hamilton leading Ricciardo (27844738602).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/79478905@N04\">35mmMan</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Lewis_Hamilton_leading_Ricciardo_%2827844738602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_542_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_525_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Webber comes back 2 (3016325957).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Webber_comes_back_2_%283016325957%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_525_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_524_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Vettel and Fisichella Britain GP.jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/people/26673904@N00\">https://www.flickr.com/people/26673904@N00</a> big-ashb",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vettel_and_Fisichella_Britain_GP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_524_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_557_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2014 Japanese Grand Prix",
+  "source_title": "File:Marussia, No.4 Max Chilton (3) (15736471351).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/78475089@N02\">Takayuki Suzuki</a> from Kanagawa, Japan",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Marussia%2C_No.4_Max_Chilton_%283%29_%2815736471351%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_557_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_472_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Hamilton look no hands (3016409699).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Hamilton_look_no_hands_%283016409699%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_472_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_481_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Hamilton Up close2 (3017234386).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Hamilton_Up_close2_%283017234386%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_481_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_502_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Massa going forward (3016342971).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Massa_going_forward_%283016342971%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_502_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_550_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2011 Canadian Grand Prix",
+  "source_title": "File:2011 Canadian GP - Kobayashi-Heidfeld crash.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/12169388@N05\">Mark McArdle</a> from Canada",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/2011_Canadian_GP_-_Kobayashi-Heidfeld_crash.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_550_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_508_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Raki going backwards 2 (3016350317).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Raki_going_backwards_2_%283016350317%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_508_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_501_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Massa (3016392763).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Massa_%283016392763%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_501_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_482_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Hamilton waves (3017231826).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Hamilton_waves_%283017231826%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_482_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_486_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:Heikki Kovalainen 2008 Britain 2.jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/35395389@N00\">David Hunt</a> from Warwickshire, UK",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Heikki_Kovalainen_2008_Britain_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_486_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_520_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2008 British Grand Prix",
+  "source_title": "File:The winner (3017233542).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/31343702@N06\">Mark Kent</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/The_winner_%283017233542%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_520_WET.jpg"
+ },
+ {
+  "filename": "racetrainv3_543_WET.jpg",
+  "label": "WET",
+  "note": "source queries: cat:2016 Monaco Grand Prix",
+  "source_title": "File:Nico Rosberg in the rain at Monaco (27946176625).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/79478905@N04\">35mmMan</a>",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Nico_Rosberg_in_the_rain_at_Monaco_%2827946176625%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "filepath": "data/racing_train_pool_v3/images/racetrainv3_543_WET.jpg"
+ }
+]

@@ -1,0 +1,52 @@
+{
+  "experiment": "exp05_data_moat_optionB",
+  "strategy": "optionB",
+  "init_checkpoint": "c:/Users/Rivan/Projects/AI_Grand_Prix/experiments/exp02_racing_v2/checkpoints/best_model.pth",
+  "rscd_train_n": 2582,
+  "rscd_val_n": 379,
+  "racing_v1_train_n_raw": 97,
+  "racing_v1_val_n": 18,
+  "racing_v2_train_n_raw": 150,
+  "racing_v2_val_n": 27,
+  "racing_v3_train_n_raw": 476,
+  "racing_v3_val_n": 85,
+  "racing_v3_pool_dir": "c:/Users/Rivan/Projects/AI_Grand_Prix/data/racing_train_pool_v3",
+  "combined_racing_train_n_raw": 723,
+  "combined_racing_train_raw_class_counts": {
+    "WET": 145,
+    "DAMP": 47,
+    "DRY": 531
+  },
+  "oversample_factors_per_class": {
+    "DRY": 1,
+    "DAMP": 4,
+    "WET": 2
+  },
+  "use_extra_inverse_freq_class_weight": true,
+  "combined_racing_train_n_poststrategy": 1009,
+  "combined_racing_train_poststrategy_class_counts": {
+    "WET": 290,
+    "DAMP": 188,
+    "DRY": 531
+  },
+  "combined_racing_val_n": 130,
+  "combined_train_n": 3591,
+  "combined_val_n": 509,
+  "combined_train_class_counts": {
+    "DRY": 1606,
+    "DAMP": 1019,
+    "WET": 966
+  },
+  "class_weights_in_loss": [
+    0.7077840566635132,
+    1.115506649017334,
+    1.1767094135284424
+  ],
+  "lr": 0.0003,
+  "epochs_max": 12,
+  "epochs_run": 5,
+  "best_val_macro_f1": 0.745891396705095,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "seed": 42
+}

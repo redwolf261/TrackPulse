@@ -1,0 +1,220 @@
+{
+  "checkpoint": "experiments/exp02_racing_v2/checkpoints/best_model.pth",
+  "label": "exp02_production_baseline",
+  "eval_49img": {
+    "n_total": 49,
+    "n_ambiguous_excluded": 5,
+    "n_quantitative": 44,
+    "accuracy": 0.7272727272727273,
+    "macro_f1": 0.515959595959596,
+    "per_class": {
+      "DRY": {
+        "precision": 0.95,
+        "recall": 0.6333333333333333,
+        "f1": 0.76,
+        "support": 30
+      },
+      "DAMP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "WET": {
+        "precision": 0.6842105263157895,
+        "recall": 0.9285714285714286,
+        "f1": 0.7878787878787878,
+        "support": 14
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        5,
+        6
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        13
+      ]
+    ],
+    "classes_order": [
+      "DRY",
+      "DAMP",
+      "WET"
+    ],
+    "wet_recall": 0.9285714285714286,
+    "dry_recall": 0.6333333333333333,
+    "dry_precision": 0.95,
+    "false_wet_rate": 0.2,
+    "false_dry_rate": 0.07142857142857142,
+    "mean_confidence_correct": 0.8848692923784256,
+    "mean_confidence_incorrect": 0.8285642514626185
+  },
+  "eval_v2_67img": {
+    "n_total": 67,
+    "n_ambiguous_excluded": 5,
+    "n_quantitative": 62,
+    "accuracy": 0.7580645161290323,
+    "macro_f1": 0.7616495991108994,
+    "per_class": {
+      "DRY": {
+        "precision": 0.8636363636363636,
+        "recall": 0.6333333333333333,
+        "f1": 0.7307692307692307,
+        "support": 30
+      },
+      "DAMP": {
+        "precision": 0.75,
+        "recall": 0.8333333333333334,
+        "f1": 0.7894736842105263,
+        "support": 18
+      },
+      "WET": {
+        "precision": 0.65,
+        "recall": 0.9285714285714286,
+        "f1": 0.7647058823529411,
+        "support": 14
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        5,
+        6
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        1,
+        0,
+        13
+      ]
+    ],
+    "classes_order": [
+      "DRY",
+      "DAMP",
+      "WET"
+    ],
+    "wet_recall": 0.9285714285714286,
+    "dry_recall": 0.6333333333333333,
+    "dry_precision": 0.8636363636363636,
+    "false_wet_rate": 0.2,
+    "false_dry_rate": 0.07142857142857142,
+    "mean_confidence_correct": 0.9202259690203565,
+    "mean_confidence_incorrect": 0.8289028286933899
+  },
+  "eval_v3_103img": {
+    "n_total": 103,
+    "n_ambiguous_excluded": 5,
+    "n_quantitative": 98,
+    "accuracy": 0.6632653061224489,
+    "macro_f1": 0.6550783699059561,
+    "per_class": {
+      "DRY": {
+        "precision": 0.7380952380952381,
+        "recall": 0.6739130434782609,
+        "f1": 0.7045454545454546,
+        "support": 46
+      },
+      "DAMP": {
+        "precision": 0.5714285714285714,
+        "recall": 0.7272727272727273,
+        "f1": 0.64,
+        "support": 22
+      },
+      "WET": {
+        "precision": 0.6428571428571429,
+        "recall": 0.6,
+        "f1": 0.6206896551724138,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        31,
+        7,
+        8
+      ],
+      [
+        4,
+        16,
+        2
+      ],
+      [
+        7,
+        5,
+        18
+      ]
+    ],
+    "classes_order": [
+      "DRY",
+      "DAMP",
+      "WET"
+    ],
+    "wet_recall": 0.6,
+    "dry_recall": 0.6739130434782609,
+    "dry_precision": 0.7380952380952381,
+    "false_wet_rate": 0.17391304347826086,
+    "false_dry_rate": 0.23333333333333334,
+    "mean_confidence_correct": 0.9174210392511808,
+    "mean_confidence_incorrect": 0.8729114333788554
+  },
+  "rscd_test_305img": {
+    "accuracy": 0.7475409836065574,
+    "macro_f1": 0.7243568916339617,
+    "per_class": {
+      "DRY": {
+        "precision": 0.8642857142857143,
+        "recall": 0.8175675675675675,
+        "f1": 0.8402777777777778,
+        "support": 148
+      },
+      "DAMP": {
+        "precision": 0.5764705882352941,
+        "recall": 0.6125,
+        "f1": 0.593939393939394,
+        "support": 80
+      },
+      "WET": {
+        "precision": 0.725,
+        "recall": 0.7532467532467533,
+        "f1": 0.7388535031847133,
+        "support": 77
+      }
+    },
+    "confusion_matrix": [
+      [
+        121,
+        21,
+        6
+      ],
+      [
+        15,
+        49,
+        16
+      ],
+      [
+        4,
+        15,
+        58
+      ]
+    ],
+    "classes_order": [
+      "DRY",
+      "DAMP",
+      "WET"
+    ],
+    "wet_recall": 0.7532467532467533,
+    "dry_precision": 0.8642857142857143
+  }
+}

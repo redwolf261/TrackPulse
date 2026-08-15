@@ -1,0 +1,8 @@
+{
+  "eval_additions_n": 36,
+  "train_pool_n": 561,
+  "existing_pool_n": 341,
+  "overlap_eval_train": 0,
+  "overlap_eval_existing": 0,
+  "overlap_train_existing": 0
+}

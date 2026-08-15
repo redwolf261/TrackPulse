@@ -1,0 +1,28 @@
+category: 2021 Belgian Grand Prix
+category: 2008 British Grand Prix
+category: 2007 European Grand Prix
+category: 2000 European Grand Prix
+category: 2021 Turkish Grand Prix
+category: 2019 German Grand Prix
+category: 2016 Monaco Grand Prix
+category: 2012 Malaysian Grand Prix
+category: 2010 Malaysian Grand Prix
+category: 2011 Canadian Grand Prix
+category: 2014 Japanese Grand Prix
+category: 1998 Belgian Grand Prix
+category: 1999 European Grand Prix
+category: 2019 Japanese Grand Prix
+category: 2021 Russian Grand Prix
+category: 2023 Dutch Grand Prix
+category: 2008 Japanese Grand Prix
+search: track drying out rain race
+search: damp tarmac racing car
+search: drying racing line wet track
+search: rain stopped track still wet racing
+search: light drizzle race track car
+search: misty wet track racing car
+search: wet weather tyres drying track
+search: safety car rain drying track
+total unique candidate titles: 979
+got imageinfo for 979 titles
+saved 976 candidates with imageinfo (mime-filtered)

@@ -1,0 +1,19 @@
+accepted 25 / scanned 33/1246
+accepted 50 / scanned 60/1246
+accepted 75 / scanned 85/1246
+accepted 100 / scanned 112/1246
+accepted 125 / scanned 138/1246
+accepted 150 / scanned 164/1246
+accepted 175 / scanned 191/1246
+accepted 200 / scanned 217/1246
+accepted 225 / scanned 253/1246
+accepted 250 / scanned 278/1246
+accepted 275 / scanned 306/1246
+accepted 300 / scanned 336/1246
+accepted 325 / scanned 420/1246
+accepted 350 / scanned 445/1246
+accepted 375 / scanned 470/1246
+accepted 400 / scanned 497/1246
+
+DONE. scanned=1246 accepted=412 rejected_license=335 rejected_dup=0 rejected_download_fail=499 rejected_too_small=0
+saved staged_accepted.json
