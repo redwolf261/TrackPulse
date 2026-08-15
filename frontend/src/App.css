@@ -191,7 +191,9 @@ body {
   gap: 0;
   flex: 1;
   min-height: 0;
+  min-width: 0;
 }
+.pw-grid > * { min-width: 0; }
 
 .pw-col {
   display: flex;
@@ -199,7 +201,9 @@ body {
   gap: 12px;
   padding: 14px;
   overflow-y: auto;
+  overflow-x: hidden;
   min-height: 0;
+  min-width: 0;
 }
 .pw-col-left   { border-right: 1px solid var(--border); }
 .pw-col-center { border-right: 1px solid var(--border); }
@@ -708,9 +712,10 @@ body {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.4; }
 }
-.sim-scenarios { display: flex; gap: 6px; }
+.sim-scenarios { display: flex; flex-wrap: wrap; gap: 6px; }
 .sim-scenario-btn {
-  flex: 1;
+  flex: 1 1 72px;
+  min-width: 0;
   padding: 5px 6px;
   border: 1px solid var(--border);
   border-radius: 6px;
