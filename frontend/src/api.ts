@@ -8,6 +8,19 @@ export interface EvidenceTrail {
   concerns: string[];
 }
 
+export interface TelemetryData {
+  grip_index: number;
+  optimal_compound: string;
+  crossover_status: "OPTIMAL" | "CROSSOVER_APPROACHING" | "CROSSOVER_ACTIVE";
+  crossover_message: string;
+  lap_delta_seconds: number;
+  compound_deltas: {
+    SLICK: number;
+    INTERMEDIATE: number;
+    FULL_WET: number;
+  };
+}
+
 export interface PredictResponse {
   session_id: string;
   observation_id: number;
@@ -17,6 +30,8 @@ export interface PredictResponse {
   trend: "WETTING" | "DRYING" | "STABLE";
   suggestion: string;
   evidence: EvidenceTrail;
+  telemetry?: TelemetryData;
+  sector_id?: string;
   created_at: string;
   model_source: "trained-onnx" | "fallback-heuristic";
 }
@@ -37,10 +52,15 @@ export interface HistoryResponse {
   observations: HistoryObservation[];
 }
 
-export async function predict(file: File, sessionId: string): Promise<PredictResponse> {
+export async function predict(
+  file: File,
+  sessionId: string,
+  sectorId: string = "ALL"
+): Promise<PredictResponse> {
   const form = new FormData();
   form.append("file", file);
   form.append("session_id", sessionId);
+  form.append("sector_id", sectorId);
   const res = await fetch(`${API_BASE}/predict`, { method: "POST", body: form });
   if (!res.ok) {
     const detail = await res.text();
@@ -56,10 +76,15 @@ export interface PredictVideoResponse {
   observations: PredictResponse[];
 }
 
-export async function predictVideo(file: File, sessionId: string): Promise<PredictVideoResponse> {
+export async function predictVideo(
+  file: File,
+  sessionId: string,
+  sectorId: string = "ALL"
+): Promise<PredictVideoResponse> {
   const form = new FormData();
   form.append("file", file);
   form.append("session_id", sessionId);
+  form.append("sector_id", sectorId);
   const res = await fetch(`${API_BASE}/predict/video`, { method: "POST", body: form });
   if (!res.ok) {
     const detail = await res.text();
