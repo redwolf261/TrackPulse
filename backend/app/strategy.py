@@ -74,9 +74,14 @@ def compute_tyre_crossover(probabilities: dict[str, float], trend: str, confiden
     grip = compute_grip_index(probabilities)
 
     # Lap time penalty (seconds) vs a dry baseline for each compound
-    slick_delta = round(p_damp * 4.5 + p_wet * 14.2, 1)
-    inter_delta = round(p_dry * 2.8 + p_wet * 3.8, 1)
-    wet_delta = round(p_dry * 8.5 + p_damp * 3.2, 1)
+    # On a drying trajectory, a clean groove forms, significantly reducing slick penalty
+    # and causing grooved intermediate tyres to overheat on dry patches.
+    drying_factor = 0.55 if trend == "DRYING" else (1.2 if trend == "WETTING" else 1.0)
+    inter_thermal_penalty = 1.8 if (trend == "DRYING" and p_dry > 0.35) else 0.0
+
+    slick_delta = round(max(0.0, (p_damp * 3.8 * drying_factor) + (p_wet * 14.2)), 1)
+    inter_delta = round(max(0.0, (p_dry * 2.8) + (p_wet * 3.8) + inter_thermal_penalty), 1)
+    wet_delta = round(max(0.0, (p_dry * 8.5) + (p_damp * 3.2)), 1)
 
     # Compound decision tree based on grip index + trend
     if grip >= 80:
@@ -84,10 +89,14 @@ def compute_tyre_crossover(probabilities: dict[str, float], trend: str, confiden
         status = "OPTIMAL"
         message = "Track in prime slick window — maximum mechanical grip available."
     elif grip >= 62:
-        if trend == "DRYING":
+        if trend == "DRYING" and slick_delta <= inter_delta:
             compound = "SLICK (C3)"
             status = "CROSSOVER_ACTIVE"
             message = "Dry line forming: slicks now faster than intermediates — pit window open."
+        elif trend == "DRYING":
+            compound = "INTERMEDIATE"
+            status = "CROSSOVER_APPROACHING"
+            message = "Dry line developing: prepare for slick crossover in coming laps."
         elif trend == "WETTING":
             compound = "INTERMEDIATE"
             status = "CROSSOVER_APPROACHING"
