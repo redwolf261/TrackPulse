@@ -75,7 +75,7 @@ body {
   gap: 8px;
   flex-shrink: 0;
 }
-.cmd-logo-flag { font-size: 1.3rem; }
+.cmd-logo-flag { color: var(--wet); flex-shrink: 0; }
 .cmd-logo-name {
   font-family: var(--font-mono);
   font-size: 1rem;
@@ -131,7 +131,7 @@ body {
 .text-amber { color: var(--damp) !important; }
 
 .cmd-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.cmd-error-dot { color: var(--alert); font-size: 1.1rem; cursor: help; }
+.cmd-error-dot { color: var(--alert); cursor: help; display: inline-flex; }
 .cmd-reset-btn {
   padding: 5px 14px;
   border: 1px solid var(--border);
@@ -160,6 +160,7 @@ body {
   color: #fca5a5;
   font-size: 0.88rem;
 }
+.pw-error-banner > span:first-child { display: inline-flex; align-items: center; gap: 6px; }
 .pw-error-banner button {
   background: none; border: none; color: #fca5a5; font-size: 1.2rem;
   cursor: pointer; line-height: 1; padding: 0 4px;
@@ -207,6 +208,9 @@ body {
   border-radius: inherit;
 }
 .pw-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 700;
@@ -216,6 +220,7 @@ body {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
 }
+.pw-card-title svg { flex-shrink: 0; opacity: 0.85; }
 .pw-card-circuit { padding: 12px; }
 .pw-card-chart   { flex: 1; }
 .pw-card-result  {}
@@ -234,7 +239,7 @@ body {
   align-items: center;
   gap: 10px;
 }
-.empty-state-icon { font-size: 2.5rem; opacity: 0.4; }
+.empty-state-icon { opacity: 0.4; color: var(--text-dim); }
 
 /* ════════════════════════════════════════════════════════════════════════════
    UPLOAD / DROPZONE
@@ -311,6 +316,9 @@ body {
   font-size: 0.8rem;
 }
 .sample-row button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   background: none;
   border: 1px solid var(--border);
   color: var(--text);
@@ -431,15 +439,21 @@ body {
 .evidence-label { font-size: 0.75rem; color: var(--text-muted); }
 
 .evidence-list { list-style: none; line-height: 1.6; }
+.evidence-list li { display: flex; align-items: flex-start; gap: 6px; }
+.evidence-list li svg { flex-shrink: 0; margin-top: 3px; }
 .evidence-concerns li { color: var(--damp); }
 .evidence-reasons  li { color: var(--text-muted); }
 
 .model-caveat {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
   margin-top: 10px;
   font-size: 0.72rem;
   color: var(--text-dim);
   line-height: 1.4;
 }
+.model-caveat svg { flex-shrink: 0; margin-top: 2px; }
 
 /* ════════════════════════════════════════════════════════════════════════════
    CIRCUIT MAP
@@ -455,6 +469,9 @@ body {
   justify-content: space-between;
 }
 .circuit-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
@@ -759,6 +776,9 @@ body {
   gap: 8px;
 }
 .surface-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 700;

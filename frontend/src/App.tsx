@@ -21,6 +21,7 @@ import CircuitMap from "./CircuitMap";
 import TelemetryHUD from "./TelemetryHUD";
 import RaceSimulator from "./RaceSimulator";
 import SurfaceAnalyzer from "./SurfaceAnalyzer";
+import { IconFlag, IconCamera, IconChart, IconScan, IconBolt, IconSun, IconCloudDrizzle, IconRain, IconAlert } from "./Icons";
 
 const CONDITION_RANK: Record<string, number> = { DRY: 0, DAMP: 1, WET: 2 };
 const CONDITION_COLOR: Record<string, string> = {
@@ -197,7 +198,7 @@ export default function App() {
       {/* ═══ COMMAND HEADER ═══════════════════════════════════════════════════ */}
       <header className="cmd-header">
         <div className="cmd-logo">
-          <span className="cmd-logo-flag">🏁</span>
+          <IconFlag size={18} className="cmd-logo-flag" />
           <span className="cmd-logo-name">TrackPulse <span className="cmd-logo-pro">PRO</span></span>
         </div>
 
@@ -234,7 +235,7 @@ export default function App() {
         </div>
 
         <div className="cmd-actions">
-          {error && <span className="cmd-error-dot" title={error}>⚠</span>}
+          {error && <IconAlert size={16} className="cmd-error-dot" />}
           <button id="reset-session-btn" className="cmd-reset-btn" onClick={resetSession}>
             ↺ New Session
           </button>
@@ -244,7 +245,7 @@ export default function App() {
       {/* ═══ ERROR BANNER ═════════════════════════════════════════════════════ */}
       {error && (
         <div className="pw-error-banner">
-          <span>⚠ {error}</span>
+          <span><IconAlert size={14} /> {error}</span>
           <button onClick={() => setError(null)}>×</button>
         </div>
       )}
@@ -257,7 +258,7 @@ export default function App() {
 
           {/* Upload / Camera Panel */}
           <div className="pw-card">
-            <div className="pw-card-title">📷 CAMERA FEED</div>
+            <div className="pw-card-title"><IconCamera size={14} /> CAMERA FEED</div>
 
             {/* Drop Zone */}
             <div
@@ -298,9 +299,9 @@ export default function App() {
             <div className="sample-row">
               <span>Samples:</span>
               {[
-                { label: "☀ Dry",  url: "/samples/sample-dry.jpg",  name: "sample-dry.jpg"  },
-                { label: "⛅ Damp", url: "/samples/sample-damp.jpg", name: "sample-damp.jpg" },
-                { label: "🌧 Wet", url: "/samples/sample-wet.jpg",  name: "sample-wet.jpg"  },
+                { label: "Dry",  icon: <IconSun size={13} />,         url: "/samples/sample-dry.jpg",  name: "sample-dry.jpg"  },
+                { label: "Damp", icon: <IconCloudDrizzle size={13} />, url: "/samples/sample-damp.jpg", name: "sample-damp.jpg" },
+                { label: "Wet",  icon: <IconRain size={13} />,         url: "/samples/sample-wet.jpg",  name: "sample-wet.jpg"  },
               ].map((s) => (
                 <button
                   key={s.label}
@@ -308,7 +309,7 @@ export default function App() {
                   disabled={loading}
                   onClick={() => loadSample(s.url, s.name)}
                 >
-                  {s.label}
+                  {s.icon} {s.label}
                 </button>
               ))}
             </div>
@@ -337,7 +338,7 @@ export default function App() {
           {/* Session telemetry trend chart */}
           {chartData.length > 0 && (
             <div className="pw-card pw-card-chart">
-              <div className="pw-card-title">📈 SESSION TREND — {history.length} OBSERVATION{history.length !== 1 ? "S" : ""}</div>
+              <div className="pw-card-title"><IconChart size={14} /> SESSION TREND — {history.length} OBSERVATION{history.length !== 1 ? "S" : ""}</div>
               <ResponsiveContainer width="100%" height={130}>
                 <LineChart data={chartData} margin={{ top: 8, right: 12, left: -20, bottom: 0 }}>
                   <CartesianGrid stroke="#1a2535" strokeDasharray="4 4" />
@@ -374,7 +375,7 @@ export default function App() {
           {/* Prediction result */}
           {latest ? (
             <div className="pw-card pw-card-result">
-              <div className="pw-card-title">🔬 AI CONDITION ANALYSIS</div>
+              <div className="pw-card-title"><IconScan size={14} /> AI CONDITION ANALYSIS</div>
 
               {/* Big label + confidence */}
               <div className="result-label-row">
@@ -414,7 +415,7 @@ export default function App() {
                 </div>
                 {latest.evidence.concerns.length > 0 && (
                   <ul className="evidence-list evidence-concerns">
-                    {latest.evidence.concerns.map((c, i) => <li key={i}>⚠ {c}</li>)}
+                    {latest.evidence.concerns.map((c, i) => <li key={i}><IconAlert size={12} /> {c}</li>)}
                   </ul>
                 )}
                 {latest.evidence.reasons.length > 0 && (
@@ -427,14 +428,14 @@ export default function App() {
               {/* Model source */}
               <div className="model-caveat">
                 {latest.model_source === "fallback-heuristic"
-                  ? "⚠ Fallback heuristic — no trained model loaded."
+                  ? (<><IconAlert size={12} /> Fallback heuristic — no trained model loaded.</>)
                   : "MobileNetV3-Small (exp02) · ONNX Runtime · CPUExecutionProvider"}
               </div>
             </div>
           ) : (
             <div className="pw-card pw-card-result pw-empty-result">
               <div className="empty-state">
-                <div className="empty-state-icon">📷</div>
+                <IconCamera size={28} className="empty-state-icon" />
                 <div>Upload a track image or run the Race Simulator to begin analysis</div>
               </div>
             </div>
@@ -443,7 +444,7 @@ export default function App() {
           {/* Telemetry HUD — all values below are the model's own softmax
               output and deterministic trend/evidence logic, not measurements */}
           <div className="pw-card">
-            <div className="pw-card-title">⚡ CLASSIFIER TELEMETRY</div>
+            <div className="pw-card-title"><IconBolt size={14} /> CLASSIFIER TELEMETRY</div>
             <TelemetryHUD latest={latest} />
           </div>
 

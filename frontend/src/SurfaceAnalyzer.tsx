@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import { IconScan } from "./Icons";
 
 type Mode = "raw" | "sheen" | "texture";
 
@@ -79,7 +80,7 @@ export default function SurfaceAnalyzer({ previewUrl, isVideo }: SurfaceAnalyzer
   return (
     <div className="surface-analyzer">
       <div className="surface-header">
-        <span className="surface-title">🔬 SURFACE ANALYZER</span>
+        <span className="surface-title"><IconScan size={13} /> SURFACE ANALYZER</span>
         <div className="surface-modes">
           {modes.map((m) => (
             <button

@@ -4,7 +4,7 @@ import { predict, type PredictResponse } from "./api";
 const SCENARIOS = [
   {
     id: "dry",
-    label: "☀️ DRY",
+    label: "DRY",
     frames: [
       { url: "/samples/sample-dry.jpg",  name: "sample-dry.jpg"  },
       { url: "/samples/sample-dry.jpg",  name: "sample-dry-2.jpg" },
@@ -14,7 +14,7 @@ const SCENARIOS = [
   },
   {
     id: "mixed",
-    label: "⛅ MIXED",
+    label: "MIXED",
     frames: [
       { url: "/samples/sample-dry.jpg",  name: "lap1-s1.jpg" },
       { url: "/samples/sample-damp.jpg", name: "lap1-s2.jpg" },
@@ -24,7 +24,7 @@ const SCENARIOS = [
   },
   {
     id: "wet",
-    label: "🌧️ WET",
+    label: "WET",
     frames: [
       { url: "/samples/sample-wet.jpg",  name: "wet-s1.jpg"  },
       { url: "/samples/sample-wet.jpg",  name: "wet-s2.jpg"  },
@@ -63,7 +63,7 @@ export default function RaceSimulator({ sessionId, onResult }: RaceSimulatorProp
         const result = await predict(file, sessionRef.current);
         onResult(result);
       } catch {
-        setStatus("⚠ Frame analysis failed — check backend connection");
+        setStatus("Frame analysis failed — check backend connection");
       }
     },
     [onResult]
@@ -85,7 +85,7 @@ export default function RaceSimulator({ sessionId, onResult }: RaceSimulatorProp
           });
         }
       }
-      setStatus("✓ Simulation complete");
+      setStatus("Simulation complete");
       setRunning(false);
     },
     [runFrame]

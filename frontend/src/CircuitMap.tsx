@@ -1,4 +1,5 @@
 import { type PredictResponse } from "./api";
+import { IconFlag } from "./Icons";
 
 // Corner definitions: id, label, position on 580×380 viewBox, sector (1/2/3)
 export const CORNERS = [
@@ -74,7 +75,7 @@ export default function CircuitMap({ latest, selectedCorner, onCornerSelect }: C
   return (
     <div className="circuit-map-wrap">
       <div className="circuit-map-label">
-        <span className="circuit-name">🏁 SILVERSTONE GP</span>
+        <span className="circuit-name"><IconFlag size={13} /> SILVERSTONE GP</span>
         {confidencePct !== null && label && (
           <span className="circuit-grip-badge" style={{ color: sectorColor(1) }}>
             {label} · {confidencePct}%
