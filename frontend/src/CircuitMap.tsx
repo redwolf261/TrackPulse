@@ -62,7 +62,7 @@ interface CircuitMapProps {
 
 export default function CircuitMap({ latest, selectedCorner, onCornerSelect }: CircuitMapProps) {
   const label = latest?.label ?? null;
-  const grip  = latest?.telemetry?.grip_index ?? null;
+  const confidencePct = latest ? Math.round(latest.confidence * 100) : null;
 
   // Color each sector independently — use the same label color for now;
   // when multi-sector data is available each sector can diverge.
@@ -75,9 +75,9 @@ export default function CircuitMap({ latest, selectedCorner, onCornerSelect }: C
     <div className="circuit-map-wrap">
       <div className="circuit-map-label">
         <span className="circuit-name">🏁 SILVERSTONE GP</span>
-        {grip !== null && (
+        {confidencePct !== null && label && (
           <span className="circuit-grip-badge" style={{ color: sectorColor(1) }}>
-            {grip}% GRIP
+            {label} · {confidencePct}%
           </span>
         )}
       </div>

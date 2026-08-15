@@ -192,9 +192,6 @@ export default function App() {
     label: obs.label,
   }));
 
-  const grip   = latest?.telemetry?.grip_index ?? null;
-  const tyre   = latest?.telemetry?.optimal_compound ?? null;
-
   return (
     <div className="pitwall">
       {/* ═══ COMMAND HEADER ═══════════════════════════════════════════════════ */}
@@ -210,23 +207,19 @@ export default function App() {
             <span className="cmd-tel-value">SILVERSTONE GP</span>
           </div>
           <div className="cmd-tel-sep" />
-          {grip !== null && (
+          {latest && (
             <>
               <div className="cmd-tel-item">
-                <span className="cmd-tel-label">GLOBAL GRIP</span>
-                <span className="cmd-tel-value" style={{ color: CONDITION_COLOR[latest?.label ?? "DRY"] }}>
-                  {grip}%
+                <span className="cmd-tel-label">CONDITION</span>
+                <span className="cmd-tel-value" style={{ color: CONDITION_COLOR[latest.label] }}>
+                  {latest.label} · {(latest.confidence * 100).toFixed(0)}%
                 </span>
               </div>
               <div className="cmd-tel-sep" />
-            </>
-          )}
-          {tyre && (
-            <>
               <div className="cmd-tel-item">
-                <span className="cmd-tel-label">OPTIMAL TYRE</span>
-                <span className="cmd-tel-value" style={{ color: CONDITION_COLOR[latest?.label ?? "DRY"] }}>
-                  {tyre}
+                <span className="cmd-tel-label">TREND</span>
+                <span className="cmd-tel-value" style={{ color: CONDITION_COLOR[latest.label] }}>
+                  {latest.trend}
                 </span>
               </div>
               <div className="cmd-tel-sep" />
@@ -447,13 +440,11 @@ export default function App() {
             </div>
           )}
 
-          {/* Telemetry HUD */}
+          {/* Telemetry HUD — all values below are the model's own softmax
+              output and deterministic trend/evidence logic, not measurements */}
           <div className="pw-card">
-            <div className="pw-card-title">⚡ TYRE TELEMETRY & CROSSOVER</div>
-            <TelemetryHUD
-              telemetry={latest?.telemetry}
-              label={latest?.label ?? null}
-            />
+            <div className="pw-card-title">⚡ CLASSIFIER TELEMETRY</div>
+            <TelemetryHUD latest={latest} />
           </div>
 
         </aside>

@@ -26,7 +26,7 @@ from sqlalchemy import select
 from .db import init_db, get_session, Observation
 from .evidence import build_evidence_trail
 from .inference import classifier
-from .strategy import compute_trend, suggestion_for, compute_tyre_crossover
+from .strategy import compute_trend, suggestion_for
 from .video import extract_frames, VideoDecodeError
 
 logger = logging.getLogger("trackpulse")
@@ -78,9 +78,9 @@ def _classify_and_persist(
     sector_id: str = "ALL",
 ) -> dict:
     """Shared core of /predict and /predict/video: classify one frame, compute
-    trend + motorsport telemetry against this session's history, persist, return
-    the API shape. Raises HTTPException on failure — callers decide whether that
-    aborts the whole request (single image) or is recorded per-frame (video batch)."""
+    trend against this session's history, persist, return the API shape. Raises
+    HTTPException on failure — callers decide whether that aborts the whole
+    request (single image) or is recorded per-frame (video batch)."""
     try:
         result = classifier.predict(image_bytes)
     except UnidentifiedImageError:
@@ -106,7 +106,6 @@ def _classify_and_persist(
         evidence = build_evidence_trail(
             result["label"], probabilities, trend, result["confidence"], past_labels
         )
-        telemetry = compute_tyre_crossover(probabilities, trend, result["confidence"])
 
         obs = Observation(
             session_id=session_id,
@@ -136,7 +135,6 @@ def _classify_and_persist(
         "trend": trend,
         "suggestion": suggestion,
         "evidence": evidence,
-        "telemetry": telemetry,
         "sector_id": sector_id,
         "created_at": obs.created_at.isoformat(),
         "model_source": "trained-onnx" if classifier.using_trained_model else "fallback-heuristic",

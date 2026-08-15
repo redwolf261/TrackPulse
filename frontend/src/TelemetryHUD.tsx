@@ -1,146 +1,119 @@
-import { type TelemetryData } from "./api";
+import { type PredictResponse } from "./api";
 
-const COMPOUND_COLORS: Record<string, string> = {
-  SLICK:        "#10b981",
-  INTERMEDIATE: "#f59e0b",
-  FULL_WET:     "#3b82f6",
+// Every value rendered here comes directly from the classifier's own softmax
+// output (probabilities/confidence) or the deterministic trend/evidence logic
+// in the backend — nothing here is a physical measurement or an invented
+// unit. See README's "Impact & scalability" and Evidence Trail sections for
+// why that distinction matters for this project specifically.
+
+const LABEL_COLOR: Record<string, string> = {
+  DRY: "#10b981",
+  DAMP: "#f59e0b",
+  WET: "#3b82f6",
 };
 
-const STATUS_META: Record<string, { color: string; icon: string }> = {
-  OPTIMAL:              { color: "#10b981", icon: "✓" },
-  CROSSOVER_APPROACHING:{ color: "#f59e0b", icon: "⚑" },
-  CROSSOVER_ACTIVE:     { color: "#ef4444", icon: "⚡" },
+const TREND_META: Record<string, { color: string; icon: string; text: string }> = {
+  WETTING: { color: "#3b82f6", icon: "↑", text: "Trending wetter" },
+  DRYING: { color: "#f59e0b", icon: "↓", text: "Trending drier" },
+  STABLE: { color: "#6b7a92", icon: "→", text: "Stable" },
 };
 
-interface GaugeProps { value: number; color: string }
+interface GaugeProps {
+  value: number; // 0-100, the winning class's confidence
+  color: string;
+}
 
-function GripGauge({ value, color }: GaugeProps) {
-  // SVG arc gauge: 270° sweep, starts at 7 o'clock, ends at 5 o'clock
+function ConfidenceGauge({ value, color }: GaugeProps) {
   const R = 66;
   const CIRC = 2 * Math.PI * R;
-  const SWEEP = CIRC * 0.75;          // 270° = 75% of full circle
-  const GAP   = CIRC - SWEEP;
-  const offset = SWEEP * (1 - value / 100); // how much arc to "empty"
+  const SWEEP = CIRC * 0.75;
+  const GAP = CIRC - SWEEP;
+  const offset = SWEEP * (1 - value / 100);
 
   return (
-    <svg
-      viewBox="-90 -90 180 180"
-      className="grip-gauge-svg"
-      aria-label={`Track grip ${value}%`}
-    >
-      {/* Background track */}
+    <svg viewBox="-90 -90 180 180" className="grip-gauge-svg" aria-label={`Model confidence ${value}%`}>
       <circle
-        cx="0" cy="0" r={R}
-        fill="none"
-        stroke="#1a2535"
-        strokeWidth="14"
-        strokeDasharray={`${SWEEP} ${GAP}`}
-        strokeDashoffset={-GAP / 2}
-        strokeLinecap="round"
-        transform="rotate(135)"
+        cx="0" cy="0" r={R} fill="none" stroke="#1a2535" strokeWidth="14"
+        strokeDasharray={`${SWEEP} ${GAP}`} strokeDashoffset={-GAP / 2}
+        strokeLinecap="round" transform="rotate(135)"
       />
-      {/* Coloured fill arc */}
       <circle
-        cx="0" cy="0" r={R}
-        fill="none"
-        stroke={color}
-        strokeWidth="14"
+        cx="0" cy="0" r={R} fill="none" stroke={color} strokeWidth="14"
         strokeDasharray={`${SWEEP - offset} ${CIRC - (SWEEP - offset)}`}
-        strokeDashoffset={-GAP / 2}
-        strokeLinecap="round"
-        transform="rotate(135)"
+        strokeDashoffset={-GAP / 2} strokeLinecap="round" transform="rotate(135)"
         style={{ transition: "stroke-dasharray 0.7s cubic-bezier(.4,0,.2,1), stroke 0.5s ease" }}
         filter={`drop-shadow(0 0 6px ${color}88)`}
       />
-      {/* Grip % text */}
       <text x="0" y="4" textAnchor="middle" dominantBaseline="middle"
-        fill={color} fontSize="26" fontWeight="700"
-        fontFamily="JetBrains Mono, monospace"
-        style={{ transition: "fill 0.5s ease" }}
-      >
+        fill={color} fontSize="26" fontWeight="700" fontFamily="JetBrains Mono, monospace">
         {value}
       </text>
       <text x="0" y="26" textAnchor="middle" dominantBaseline="middle"
-        fill="#6b7a92" fontSize="10" fontFamily="Inter, sans-serif"
-      >
-        GRIP %
+        fill="#6b7a92" fontSize="10" fontFamily="Inter, sans-serif">
+        CONFIDENCE %
       </text>
     </svg>
   );
 }
 
 interface TelemetryHUDProps {
-  telemetry: TelemetryData | null | undefined;
-  label: "DRY" | "DAMP" | "WET" | null;
+  latest: PredictResponse | null;
 }
 
-const LABEL_GRIP_COLOR: Record<string, string> = {
-  DRY:  "#10b981",
-  DAMP: "#f59e0b",
-  WET:  "#3b82f6",
-};
-
-export default function TelemetryHUD({ telemetry, label }: TelemetryHUDProps) {
-  const grip = telemetry?.grip_index ?? 82;
-  const gripColor = label ? LABEL_GRIP_COLOR[label] : "#10b981";
-  const status = telemetry?.crossover_status ?? "OPTIMAL";
-  const meta = STATUS_META[status] ?? STATUS_META["OPTIMAL"];
-  const deltas = telemetry?.compound_deltas;
+export default function TelemetryHUD({ latest }: TelemetryHUDProps) {
+  const label = latest?.label ?? null;
+  const confidencePct = latest ? Math.round(latest.confidence * 100) : 0;
+  const color = label ? LABEL_COLOR[label] : "#6b7a92";
+  const trend = latest?.trend ?? "STABLE";
+  const trendMeta = TREND_META[trend];
 
   return (
     <div className="telemetry-hud">
-      {/* Grip Gauge */}
       <div className="grip-gauge-wrap">
-        <GripGauge value={grip} color={gripColor} />
+        <ConfidenceGauge value={confidencePct} color={color} />
         <div className="grip-compound">
-          <span className="grip-compound-label">OPTIMAL TYRE</span>
-          <span className="grip-compound-val" style={{ color: gripColor }}>
-            {telemetry?.optimal_compound ?? "—"}
+          <span className="grip-compound-label">CURRENT READING</span>
+          <span className="grip-compound-val" style={{ color }}>
+            {label ?? "—"}
           </span>
         </div>
       </div>
 
-      {/* Pit Strategy Callout */}
-      {telemetry && (
+      {latest && (
         <div
-          className={`pit-callout pit-callout-${status.toLowerCase()}`}
-          style={{ borderColor: meta.color, color: meta.color }}
+          className="pit-callout"
+          style={{ borderColor: trendMeta.color, color: trendMeta.color }}
         >
-          <span className="pit-callout-icon">{meta.icon}</span>
-          <span className="pit-callout-text">{telemetry.crossover_message}</span>
-          {status !== "OPTIMAL" && (
-            <span className="pit-callout-pulse" style={{ background: meta.color }} />
-          )}
+          <span className="pit-callout-icon">{trendMeta.icon}</span>
+          <span className="pit-callout-text">{trendMeta.text} — {latest.suggestion}</span>
         </div>
       )}
 
-      {/* Compound Delta Matrix */}
-      {deltas && (
+      {latest && (
         <div className="compound-matrix">
-          <div className="compound-matrix-title">LAP Δ vs DRY BENCHMARK</div>
-          {(["SLICK", "INTERMEDIATE", "FULL_WET"] as const).map((c) => {
-            const delta = deltas[c];
-            const isOptimal = telemetry?.optimal_compound?.toUpperCase().startsWith(c.split(" ")[0]);
-            const col = COMPOUND_COLORS[c];
-            const barWidth = Math.min(100, (delta / 15) * 100);
+          <div className="compound-matrix-title">CLASS PROBABILITIES (MODEL OUTPUT)</div>
+          {(["DRY", "DAMP", "WET"] as const).map((cls) => {
+            const p = Math.round(latest.probabilities[cls] * 100);
+            const isTop = cls === label;
+            const col = LABEL_COLOR[cls];
             return (
-              <div key={c} className={`compound-row ${isOptimal ? "compound-row--optimal" : ""}`}
-                style={{ borderColor: isOptimal ? col : "transparent" }}>
-                <span className="compound-name" style={{ color: isOptimal ? col : "#6b7a92" }}>
-                  {isOptimal ? "▶ " : "  "}{c.replace("_", " ")}
+              <div key={cls} className={`compound-row ${isTop ? "compound-row--optimal" : ""}`}
+                style={{ borderColor: isTop ? col : "transparent" }}>
+                <span className="compound-name" style={{ color: isTop ? col : "#6b7a92" }}>
+                  {isTop ? "▶ " : "  "}{cls}
                 </span>
                 <div className="compound-bar-track">
                   <div
                     className="compound-bar-fill"
                     style={{
-                      width: `${barWidth}%`,
+                      width: `${p}%`,
                       background: `linear-gradient(90deg, ${col}44, ${col})`,
                       transition: "width 0.7s cubic-bezier(.4,0,.2,1)",
                     }}
                   />
                 </div>
-                <span className="compound-delta" style={{ color: isOptimal ? col : "#6b7a92" }}>
-                  +{delta.toFixed(1)}s
+                <span className="compound-delta" style={{ color: isTop ? col : "#6b7a92" }}>
+                  {p}%
                 </span>
               </div>
             );
@@ -148,12 +121,11 @@ export default function TelemetryHUD({ telemetry, label }: TelemetryHUDProps) {
         </div>
       )}
 
-      {/* Lap delta summary */}
-      {telemetry && (
+      {latest && (
         <div className="lap-delta-row">
-          <span className="lap-delta-label">BEST LAP Δ</span>
-          <span className="lap-delta-value" style={{ color: gripColor }}>
-            +{telemetry.lap_delta_seconds.toFixed(1)}s
+          <span className="lap-delta-label">TRUST LEVEL</span>
+          <span className="lap-delta-value" style={{ color }}>
+            {latest.evidence.trust}
           </span>
         </div>
       )}
